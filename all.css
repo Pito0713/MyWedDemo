@@ -1,0 +1,69 @@
+/*-import VariableCSS.file-*/
+@import url(./css-variable.css);
+/*--------Global--------*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: var(--text-color)
+}
+/*--------Nav----------*/
+.navbar {
+    display: block;
+    position: relative;
+}
+.nav-branch {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    list-style: none;
+    font-size: 0.9rem;
+}
+.nav-branch .nav-logo,
+.nav-branch .nav-items {
+    position: relative;
+    padding: 0rem 3rem;
+    margin: 1px;
+    text-align: center;
+    
+}
+.nav-items:hover::before{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content:" ";
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    animation-name: navItem;
+    animation-duration:0.7s;
+}
+.homeBackGround{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homePageBackGround {
+    background-image: url(../MyWedDemo/homePage.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 400px;
+}
+
+@keyframes navItem{
+    0% {
+        height:0;
+    }
+    100% {
+        height: 100%;
+    }
+}
