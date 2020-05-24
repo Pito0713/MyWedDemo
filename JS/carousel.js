@@ -1,36 +1,19 @@
-const navSlide = function () {
-    const burger = document.querySelector('.nav-burger');
-    const nav = document.querySelector('.nav-branch');
-    //const navlink =document.querySelectorAll('.nav-items')
-
-    burger.addEventListener('click', () => {
-        console.log(123)
-        //toggle nav
-        nav.classList.toggle('nav-active');
-        //animation burger
-        //burger.classList.toggle('burgertoggle');
-        //animation link
-
-    });
-}
-navSlide();
 
 // 封装获取DOM节点方法   $("")
 var $ = function(selector){
     return document.querySelector(selector);
 }
 
-var wrapper = $("#wrapper");
-var list = $("#list");
-var prev = $("#prev");
-var next = $("#next");
-var index=1;//button[0].classNme="on";
-var timer;
+var list1 = document.querySelector("#AboutUsImg");
+//var prev = $("#prev");
+//var next = $("#next");
+//var index=1;//button[0].classNme="on";
+//var timer;
 //var animated = false;//动画停止标记
 
 
-var slides = document.getElementsByClassName("listImg");
-var slideIndex = 0;
+var slides1 = document.getElementsByClassName("AboutUsImg");
+var slideIndex1 = 0;
 
 function animate(offset){ 
     var time = 300;

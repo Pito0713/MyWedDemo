@@ -125,11 +125,16 @@ body {
 .AboutUs {
     display: flex;
     position: relative;
-    padding: 0.5rem
+    padding: 0.5rem;
+    width: 100%;
 }
 .AboutUsText {
     padding: 1rem;
     line-height: 2rem;
+    width: 30%;
+}
+.AboutUsImg {
+    width: 15%;
 }
 @media screen and (max-width:768px){
     .nav-logo {
@@ -154,3 +159,57 @@ body {
         width: 100%;
     }
 }
+
+/*--*/
+.none {
+    display: none;
+}
+/* 图片 */
+#wrapper{
+    position: relative;
+    width: 900px;
+    height: 400px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.list {
+    display: flex;
+}
+#list{
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+#list img{
+    width:300px;
+    float: left;
+}
+
+
+
+/* 箭头 */
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,.4);
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    transition: .2s;
+    /* 默认两个箭头隐藏 */
+    display:none;
+}
+/* 鼠标滑动箭头上时，背景色加深 */
+.arrow:hover{background: rgba(0,0,0,.7);}
+/* 鼠标滑动到轮播区域时，两个箭头显示 */
+#wrapper:hover .arrow{display: block;}
+/* 设置两个箭头位置 */
+#prev{left: 30px;}
+#next{right: 30px;}
+
