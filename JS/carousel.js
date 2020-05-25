@@ -1,10 +1,6 @@
 
-// 封装获取DOM节点方法   $("")
-var $ = function(selector){
-    return document.querySelector(selector);
-}
 
-var list1 = document.querySelector("#AboutUsImg");
+var list = document.querySelector("#list");
 //var prev = $("#prev");
 //var next = $("#next");
 //var index=1;//button[0].classNme="on";
@@ -12,18 +8,18 @@ var list1 = document.querySelector("#AboutUsImg");
 //var animated = false;//动画停止标记
 
 
-var slides1 = document.getElementsByClassName("AboutUsImg");
-var slideIndex1 = 0;
+var slides = document.getElementsByClassName("listImg");
+var slideIndex = 0;
 
 function animate(offset){ 
     var time = 300;
-    var inteval = 10;
+    var inteval = 5;
     var speed = offset/(time/inteval);
     animated=true;
-    var newLeft=parseInt(list.style.left) +offset;
+    var newTop=parseInt(list.style.top) +offset;
     function go(){
-        if ( (speed > 0 && parseInt(list.style.left) < newLeft) || (speed < 0 && parseInt(list.style.left) > newLeft)) {
-            list.style.left = parseInt(list.style.left) + speed + 'px';
+        if ( (speed > 0 && parseInt(list.style.top) < newTop) || (speed < 0 && parseInt(list.style.top) > newTop)) {
+            list.style.top = parseInt(list.style.top) + speed + 'px';
             setTimeout(go, inteval);
         }
         else 
@@ -37,13 +33,12 @@ function animate(offset){
 prev.onclick = function () {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.left = 0+'px'
+        list.style.top = 0+'px'
     }
     
     if (slideIndex == slides.length) {
         slideIndex = 0
     }
-    console.log(slideIndex)
     if (slideIndex < slides.length-3) {
         for (i = 0; i < 4; i++) {
             slides[ slideIndex + i ].style.display = "block";
@@ -66,8 +61,6 @@ prev.onclick = function () {
                 
             } else {
                 for (index = 0; index < (slideIndex - 1); index++) {
-                    console.log(index + 'index')
-                    console.log(i + 'i')
                     slides[ index ].style.display = "block";
                     slides[ index ].style.order = i+1+index;
                 }
@@ -104,23 +97,21 @@ prev.onclick = function () {
       //  slides[2].style.display = "block";
       //  slides[2].style.order = 4;
     //}
-    animate(-300)
+    animate(-150)
     slideIndex++ ;
-    list.style.left = 0+'px'
+    list.style.top = 0+'px'
 }
 next.onclick = function() {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.left = -300+'px'
+        list.style.top = -150+'px'
     }
     slideIndex--;
     if (slideIndex < 0) {
         slideIndex = slides.length - 1 ;
     }
-    console.log(list.style.left)
-    console.log(slideIndex)
     //slideIndex < slides.length-3
-    for (i = 0; i < (slides.length - 1) ; i++){
+    for (i = 0; i < 4 ; i++){
         let n = (slideIndex  + i)
         if ( n < slides.length ) {
             for (let index = 0; index < (slides.length - slideIndex); index ++) {
@@ -135,5 +126,12 @@ next.onclick = function() {
         }
 
     }
-    animate(300)
+    animate(150)
 }
+function play(){
+    timer=setInterval(function(){
+        next.onclick();
+    },2000);
+}
+
+play()

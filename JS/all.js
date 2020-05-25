@@ -20,17 +20,17 @@ var $ = function(selector){
     return document.querySelector(selector);
 }
 
-var wrapper = $("#wrapper");
-var list = $("#list");
-var prev = $("#prev");
-var next = $("#next");
-var index=1;//button[0].classNme="on";
-var timer;
+//var wrapper = $("#wrapper");
+//var list = $("#list");
+//var prev = $("#prev");
+//var next = $("#next");
+//var index=1;//button[0].classNme="on";
+//var timer;
 //var animated = false;//动画停止标记
 
 
-var slides = document.getElementsByClassName("listImg");
-var slideIndex = 0;
+//var slides = document.getElementsByClassName("listImg");
+//var slideIndex = 0;
 
 function animate(offset){ 
     var time = 300;
