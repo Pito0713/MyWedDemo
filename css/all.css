@@ -104,11 +104,16 @@ body {
     }
 }
 /*-------ABOUT US-------*/
+.AboutUs {
+    position: relative;
+    display: block;
+    padding: 2.5rem;
+}
 .AboutUsTitle {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 3rem 1rem ;
+    padding: 1.5rem 1rem ;
 }
 .AboutUsTitle a{
     font-size: 2rem;
@@ -122,41 +127,110 @@ body {
     height: 10px;
     margin: 1.2rem;
 }
-.AboutUs {
-    display: flex;
+.AboutUsContainer {
     position: relative;
     padding: 0.5rem;
     width: 100%;
     height: 450px;
 }
 .AboutUsText {
-    padding: 1rem;
+    display:flex;
     line-height: 2rem;
-    width: 30%;
     height: 500px;
+}
+.AboutUsText a {
+    width: 30%;
+    padding: 1rem;
 }
 .AboutUsImg {
     position: absolute;
     width: 20%;
     top: 0%;
-    left: 77%;
+    left: 80%;
     display: block;
 }
 .Img {
     position: relative;
     width: 100%;
-    height: 420px;
+    height: 460px;
     overflow: hidden;
 }
-#list{
+.list{
     position: relative;
     display: flex;
     flex-direction: column;
 }
+.listImg img{
+    width: 250px;
+    float: left;
+    padding: 0.3rem;
+}
 .listImg {
     width: 100%;
-    display: block;
-    
+    display: block; 
+}
+
+/* 箭头 */
+.AboutUsImg .fa-chevron-up,
+.AboutUsImg .fa-chevron-down {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    margin-left: 45%;
+    text-align: center;
+    cursor: pointer;
+    padding:0.3rem
+}
+.AboutUsImg .fa-chevron-up{
+    top:0%;
+}
+.AboutUsImg .fa-chevron-down{
+    bottom: -20%;
+}
+
+.AboutUsImg  .fa-chevron-left,
+.AboutUsImg  .fa-chevron-right {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 10%;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:1024px){
+    .AboutUsText a{
+        width: 50%;
+    }
+    .AboutUsImg {
+        position: relative;
+        width: 100%;
+        display: flex;
+        left: 0%;
+    }
+    .list{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .Img {
+        height: 200px;
+    }
+    .AboutUsImg .fa-chevron-up,
+    .AboutUsImg .fa-chevron-down  {
+        display: none;
+    }
+    .AboutUsImg  .fa-chevron-left,
+    .AboutUsImg  .fa-chevron-right {
+        display: block;
+    }
+
 }
 @media screen and (max-width:768px){
     .nav-logo {
@@ -174,11 +248,15 @@ body {
     .nav-branch-logo {
         display: none;
     }
-    .AboutUs {
-        display: block;
-    }
     .AboutUs img {
         width: 100%;
+    }
+    .AboutUsText {
+        display: block;
+        height: auto;
+    }
+    .AboutUsImg img{
+        width: 300px;
     }
 }
 
@@ -187,30 +265,7 @@ body {
     display: none;
 }
 
-#list .img{
-    width:300px;
-    float: left;
-}
 
-
-
-/* 箭头 */
-#prev,#next {
-    position: relative;
-    z-index: 2;
-    width: 20px;
-    height: 20px;
-    font-size: 1.5rem;
-    margin-left: 45%;
-    text-align: center;
-    cursor: pointer;
-}
-#prev{
-    top:0%;
-}
-#next{
-    bottom: -20%;
-}
 /* 鼠标滑动箭头上时，背景色加深 */
 .arrow:hover{background: rgba(0,0,0,.7);}
 /* 鼠标滑动到轮播区域时，两个箭头显示 */

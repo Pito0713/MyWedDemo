@@ -154,3 +154,29 @@ next.onclick = function() {
     }
     animate(300)
 }
+
+
+if(screenWidth > 1024){
+    function play(){
+        timer = setInterval(function () {
+            nextDown.onclick();
+        }, 2000);
+    }
+    play();
+}
+
+function play() {
+    if(screenWidth>1024){
+        
+    }else{
+        timer = setInterval(function () {
+            nextRight.onclick();
+        }, 2000);
+    }
+}
+
+function stop() {
+    clearInterval(timer);
+}
+
+
