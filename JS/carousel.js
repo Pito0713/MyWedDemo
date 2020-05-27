@@ -7,9 +7,7 @@ var prevUp = document.querySelector("#prevUp");
 var prevLeft = document.querySelector("#prevLeft");
 var nextDown = document.querySelector("#nextDown");
 var nextRight = document.querySelector("#nextRight");
-//var index=1;//button[0].classNme="on";
 var timer;
-//var animated = false;//动画停止标记
 
 
 var slides = document.getElementsByClassName("listImg");
@@ -71,7 +69,7 @@ prevUp.onclick = function () {
 
         };
     }
-    animate(-150)
+    animate(-176)
     slideIndex++;
     list.style.left = 0 + 'px'
 }
@@ -102,14 +100,14 @@ prevLeft.onclick = function () {
             }
         };
     }
-    animate(-150)
+    animate(-259)
     slideIndex++;
     list.style.left = 0 + 'px'
 }
 nextDown.onclick = function () {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.top = -150 + 'px'
+        list.style.top = -176 + 'px'
     }
     slideIndex--;
     if (slideIndex < 0) {
@@ -129,12 +127,12 @@ nextDown.onclick = function () {
             };
         }
     }
-    animate(150)
+    animate(176)
 }
 nextRight.onclick = function () {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.left = -150 + 'px'
+        list.style.left = -259 + 'px'
     }
     slideIndex--;
     if (slideIndex < 0) {
@@ -154,7 +152,7 @@ nextRight.onclick = function () {
             };
         }
     }
-    animate(150)
+    animate(259)
 }
 
 
@@ -172,6 +170,7 @@ function play() {
 function stop() {
     clearInterval(timer);
 }
+
 play();
 AboutUsImg.onmouseover = stop;
 AboutUsImg.onmouseout = play;
