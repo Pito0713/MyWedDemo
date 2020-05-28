@@ -11,6 +11,11 @@ body {
     font-size: 15px;
     color: var(--text-color)
 }
+
+.none {
+    display: none;
+}
+
 /*--------Nav----------*/
 .navbar {
     display: block;
@@ -131,7 +136,6 @@ body {
 .AboutUsContainer {
     position: relative;
     padding: 0.5rem;
-    height: 450px;
 }
 .AboutUsText {
     display:flex;
@@ -270,16 +274,27 @@ body {
     }
 }
 
-/*--*/
-.none {
-    display: none;
+
+/*---*/
+.itemGroup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
 }
-
-
-/* 鼠标滑动箭头上时，背景色加深 */
-.arrow:hover{background: rgba(0,0,0,.7);}
-/* 鼠标滑动到轮播区域时，两个箭头显示 */
-#wrapper:hover .arrow{display: block;}
-/* 设置两个箭头位置 */
-
-
+.itemImg {
+    position: relative;
+    display: block;
+    background-image:url(../img/itembackground.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1000px;
+    height: 550px;
+    
+}
+.itemImg img:hover{
+    transition: all 1s ease;
+    transform: scale(1.3);
+}
