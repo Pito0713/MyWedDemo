@@ -48,12 +48,12 @@
         <div class="homePageBackGround"></div>
     </div>
     <div class="AboutUs">
-        <div class="AboutUsTitle">
-            <div>
-                <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
+        <div class="TitlePart">
+
+            <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
             <a>About US</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
-        </div>
+
 
         </div>
         <div class="AboutUsContainer">
@@ -97,11 +97,16 @@
             </div>
         </div>
     </div>
-    <div class="itemGroup">
+    <div class="itemContainer">
+        <div class="TitlePart">
+            <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
+            <a>Item Group</a>
+            <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
+        </div>
         <div class="itemImg">
             <div style="top:40%; 
-                left:10%;
-                position:absolute;">
+            left:10%;
+            position:absolute;">
                 <img src="../MyWedDemo/img/item-1.png" alt="item-1" width="20%">
             </div>
             <div style="top:22%; 
@@ -114,15 +119,67 @@
             position:absolute;">
                 <img src="../MyWedDemo/img/item-3.png" alt="item-3" width="50%">
             </div>
-            <div style="top:29%; 
+            <div style="top:30%; 
             left:80%;
             position:absolute;">
                 <img src="../MyWedDemo/img/item-4.png" alt="item-4" width="25%">
             </div>
         </div>
     </div>
+    <div class="productContainer">
+        <div class="TitlePart">
+            <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
+            <a>Prouduct</a>
+            <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
+        </div>
+        <div class="productGroup">
+            <div class="productCategory">
+                <div class="productCategoryList">熱銷</div>
+                <div class="productCategoryList" onclick="Catch('Succulents')">多肉</div>
+                <div class="productCategoryList" onclick="Catch('Cactus')">仙人掌</div>
+                <div class="productCategoryList" onclick="Catch('Cultivation')">栽培器具</div>
+            </div>
+            <div class="prodcutList" id="prodcutinfo">
+                <!--<div class="prodcutItem">
+                    Product-Primary
+                    <div class="prodcutItemPoint" id="Succulents">
+                        <img src="./img/about-2.jpeg" alt="about-2">
+                        <div class="prodcutItemName">
+                            <a href="#">多肉</a>
+                            <a class="prodcutItemPrice">$ 123</a>
+                        </div>
+                        <div class="prodcutItemContent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellat veniam impedit
+                                praesentium omnis hic odit earum laborum inventore! Deserunt itaque, obcaecati nobis
+                                neque
+                                quasi minima odio molestiae asperiores architecto.</p>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="prodcutItem">
+                    <div class="prodcutItemPoint" id="Cactus">
+                        <img src="./img/about-5.jpeg" alt="about-2">
+                        <div class="prodcutItemName">
+                            <a href="#">仙人掌</a>
+                            <a class="prodcutItemPrice">$ 123</a>
+                        </div>
+                        <div class="prodcutItemContent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellat veniam impedit
+                                praesentium omnis hic odit earum laborum inventore! Deserunt itaque, obcaecati nobis
+                                neque
+                                quasi minima odio molestiae asperiores architecto.</p>
+                        </div>
+                    </div>
+                </div>-->
+                
+                <div id="info"></div>
+            </div>
+        </div>
+
+    </div>
     <script src="../MyWedDemo/JS/all.js"></script>
     <script src="../MyWedDemo/JS/carousel.js"></script>
+    <script src="../MyWedDemo/JS/Product.js"></script>
 </body>
 
 </html>

@@ -11,7 +11,13 @@ body {
     font-size: 15px;
     color: var(--text-color)
 }
-
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+a:visited {
+    color: var(--text-color);
+}
 .none {
     display: none;
 }
@@ -115,14 +121,15 @@ body {
     display: block;
     padding: 1.5rem;
 }
-.AboutUsTitle {
+.TitlePart {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 1.5rem 1rem ;
 }
-.AboutUsTitle a{
+.TitlePart a{
     font-size: 2rem;
+    padding: 1rem;
     color: var(--primary-color);
 }
 .TitleDot {
@@ -276,9 +283,10 @@ body {
 
 
 /*---*/
-.itemGroup {
+.itemContainer {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 6rem;
@@ -289,12 +297,73 @@ body {
     background-image:url(../img/itembackground.jpg);
     background-repeat:no-repeat;
     background-position: center;
-    background-size: cover;
-    width: 1000px;
+    background-size: contain;
+    width: 1024px;
     height: 550px;
-    
 }
 .itemImg img:hover{
     transition: all 1s ease;
-    transform: scale(1.3);
+    transform: scale(1.1);
+}
+
+/*---*/
+.productContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+.productCategory {
+    display: flex;
+    padding: 1rem 2rem;
+}
+.productCategoryList {
+    padding: 0rem 2rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+.prodcutList {
+    display: flex;
+    
+}
+.productGroup .prodcutList:first-child{
+    width: 60%;
+}
+.prodcutItem {
+    padding: 1rem;
+}
+.prodcutList .prodcutItem:first-child{
+    flex:1 2 600px
+}
+
+.prodcutItemPoint {
+    display: block;
+    position: relative;
+}
+.prodcutItemPoint img{
+    max-width: 100%;
+}
+.prodcutItemName-Primary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.prodcutItemPrice-Primary {
+    font-size: 3rem;
+}
+.prodcutItemContent-Primary {
+    font-size: 1rem;
+}
+.prodcutItemName {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.prodcutItemPrice{
+    font-size: 2rem;
+}
+.prodcutItemContent {
+    font-size: 0.5rem;
 }
