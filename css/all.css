@@ -116,11 +116,7 @@ a:visited {
     }
 }
 /*-------ABOUT US-------*/
-.AboutUs {
-    position: relative;
-    display: block;
-    padding: 1.5rem;
-}
+
 .TitlePart {
     display: flex;
     justify-content: center;
@@ -140,30 +136,37 @@ a:visited {
     height: 10px;
     margin: 1.2rem;
 }
+.AboutUs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .AboutUsContainer {
     position: relative;
-    padding: 0.5rem;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 1024px;
+    height: 550px;
 }
 .AboutUsText {
-    display:flex;
+    display:block;
     line-height: 2rem;
-    height: 500px;
+    padding: 0.5rem;
 }
-.AboutUsText a {
-    width: 30%;
-    padding: 1rem;
+.AboutUsText img {
+    max-width: 100%;
 }
 .AboutUsImg {
-    position: absolute;
-    width: 20%;
-    top: 0%;
-    left: 80%;
+    position: relative;
     display: block;
+    padding: 0.5rem;
 }
 .Img {
     position: relative;
     width: 100%;
-    height: 460px;
+    height: 550px;
     overflow: hidden;
 }
 .list{
@@ -216,15 +219,17 @@ a:visited {
 }
 
 @media screen and (max-width:1024px){
-    .AboutUsText a{
-        width: 50%;
+    .AboutUsContainer{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
     }
     .AboutUsImg {
         position: relative;
         width: 100%;
         display: flex;
         left: 0%;
-
         justify-content: center;
         align-items: center;
     }
@@ -244,7 +249,6 @@ a:visited {
     .AboutUsImg  .fa-chevron-right {
         display: block;
     }
-
 }
 @media screen and (max-width:768px){
     .nav-logo {
@@ -326,35 +330,29 @@ a:visited {
 }
 .prodcutList {
     display: flex;
-    
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-.productGroup .prodcutList:first-child{
-    width: 60%;
+.prodcutinfo-primary{
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
 }
-.prodcutItem {
+.productinfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.prodcutItem{
     padding: 1rem;
 }
-.prodcutList .prodcutItem:first-child{
-    flex:1 2 600px
-}
-
 .prodcutItemPoint {
     display: block;
     position: relative;
 }
 .prodcutItemPoint img{
-    max-width: 100%;
-}
-.prodcutItemName-Primary {
-    display: flex;
-    justify-content: space-between;
-    font-size: 2rem;
-}
-.prodcutItemPrice-Primary {
-    font-size: 3rem;
-}
-.prodcutItemContent-Primary {
-    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
 }
 .prodcutItemName {
     display: flex;
@@ -366,4 +364,15 @@ a:visited {
 }
 .prodcutItemContent {
     font-size: 0.5rem;
+}
+.prodcutItemName-Primary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.prodcutItemPrice-Primary {
+    font-size: 3rem;
+}
+.prodcutItemContent-Primary {
+    font-size: 1rem;
 }
