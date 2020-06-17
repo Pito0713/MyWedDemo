@@ -1,0 +1,135 @@
+.AboutUs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AboutUsContainer {
+    position: relative;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 1024px;
+    height: 550px;
+}
+.AboutUsText {
+    display: block;
+    line-height: 2rem;
+    padding: 0.5rem;
+}
+.AboutUsText img {
+    max-width: 100%;
+}
+.AboutUsImg {
+    position: relative;
+    display: block;
+    padding: 0.5rem;
+}
+.AboutUsImg .Img {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+.AboutUsImg .Img .list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+.listImg {
+    width: 100%;
+    display: block; 
+}
+.listImg img{
+    width: 300px;
+    height: 230px;
+    float: left;
+    padding: 0.3rem;
+}
+
+
+/* 箭头 */
+.AboutUsImg .fa-chevron-up,
+.AboutUsImg .fa-chevron-down {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    margin-left: 45%;
+    text-align: center;
+    cursor: pointer;
+    padding:0.3rem
+}
+.AboutUsImg .fa-chevron-up{
+    top:0%;
+}
+.AboutUsImg .fa-chevron-down{
+    bottom: -20%;
+}
+
+.AboutUsImg  .fa-chevron-left,
+.AboutUsImg  .fa-chevron-right {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:1024px){
+    .AboutUsContainer{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .AboutUsImg {
+        position: relative;
+        width: 100%;
+        display: flex;
+        left: 0%;
+        justify-content: center;
+        align-items: center;
+    }
+    .AboutUsImg .Img {
+        height: 230px;
+    }
+    .AboutUsImg .Img .list{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .AboutUsImg .fa-chevron-up,
+    .AboutUsImg .fa-chevron-down  {
+        display: none;
+    }
+    .AboutUsImg  .fa-chevron-left,
+    .AboutUsImg  .fa-chevron-right {
+        display: block;
+    }
+}
+@media screen and (max-width:768px){
+    .AboutUs img {
+        width: 100%
+    }
+    .AboutUsText {
+        display: block;
+        height: auto;
+    }
+    .AboutUsImg {
+        padding-top: 2rem;
+    }
+    .AboutUsImg .list img{
+        width: 250px;
+    }
+    .AboutUsImg  .fa-chevron-left,
+    .AboutUsImg  .fa-chevron-right {
+        display: block;
+    }
+}

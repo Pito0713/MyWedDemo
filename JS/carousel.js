@@ -69,9 +69,9 @@ prevUp.onclick = function () {
 
         };
     }
-    animate(-176)
+    animate(-200)
     slideIndex++;
-    list.style.left = 0 + 'px'
+    list.style.top = 0 + 'px'
 }
 prevLeft.onclick = function () {
     for (i = 0; i < slides.length; i++) {
@@ -100,14 +100,14 @@ prevLeft.onclick = function () {
             }
         };
     }
-    animate(-259)
+    animate(-260)
     slideIndex++;
     list.style.left = 0 + 'px'
 }
 nextDown.onclick = function () {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.top = -176 + 'px'
+        list.style.top = -200 + 'px'
     }
     slideIndex--;
     if (slideIndex < 0) {
@@ -127,12 +127,12 @@ nextDown.onclick = function () {
             };
         }
     }
-    animate(176)
+    animate(200)
 }
 nextRight.onclick = function () {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-        list.style.left = -259 + 'px'
+        list.style.left = -260 + 'px'
     }
     slideIndex--;
     if (slideIndex < 0) {
@@ -152,7 +152,7 @@ nextRight.onclick = function () {
             };
         }
     }
-    animate(259)
+    animate(260)
 }
 
 

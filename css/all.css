@@ -99,157 +99,6 @@ a:visited {
     height: 450px;
 }
 
-@keyframes navItem{
-    0% {
-        height:0;
-    }
-    100% {
-        height: 100%;
-    }
-}
-@-webkit-keyframes navItem{
-    0% {
-        height:0;
-    }
-    100% {
-        height: 100%;
-    }
-}
-/*-------ABOUT US-------*/
-
-.TitlePart {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 1.5rem 1rem ;
-}
-.TitlePart a{
-    font-size: 2rem;
-    padding: 1rem;
-    color: var(--primary-color);
-}
-.TitleDot {
-    display: block;
-    border-radius: 50%;
-    background-color: var(--border-color);
-    width: 10px;
-    height: 10px;
-    margin: 1.2rem;
-}
-.AboutUs {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.AboutUsContainer {
-    position: relative;
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    width: 1024px;
-    height: 550px;
-}
-.AboutUsText {
-    display:block;
-    line-height: 2rem;
-    padding: 0.5rem;
-}
-.AboutUsText img {
-    max-width: 100%;
-}
-.AboutUsImg {
-    position: relative;
-    display: block;
-    padding: 0.5rem;
-}
-.Img {
-    position: relative;
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
-}
-.list{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    float: left;
-}
-.listImg img{
-    width: 250px;
-    float: left;
-    padding: 0.3rem;
-}
-.listImg {
-    width: 100%;
-    display: block; 
-}
-
-/* 箭头 */
-.AboutUsImg .fa-chevron-up,
-.AboutUsImg .fa-chevron-down {
-    position: relative;
-    z-index: 2;
-    width: 20px;
-    height: 20px;
-    font-size: 1.5rem;
-    margin-left: 45%;
-    text-align: center;
-    cursor: pointer;
-    padding:0.3rem
-}
-.AboutUsImg .fa-chevron-up{
-    top:0%;
-}
-.AboutUsImg .fa-chevron-down{
-    bottom: -20%;
-}
-
-.AboutUsImg  .fa-chevron-left,
-.AboutUsImg  .fa-chevron-right {
-    position: relative;
-    z-index: 2;
-    width: 20px;
-    height: 20px;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-}
-
-@media screen and (max-width:1024px){
-    .AboutUsContainer{
-        display: block;
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-    .AboutUsImg {
-        position: relative;
-        width: 100%;
-        display: flex;
-        left: 0%;
-        justify-content: center;
-        align-items: center;
-    }
-    .list{
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-    .Img {
-        height: 200px;
-    }
-    .AboutUsImg .fa-chevron-up,
-    .AboutUsImg .fa-chevron-down  {
-        display: none;
-    }
-    .AboutUsImg  .fa-chevron-left,
-    .AboutUsImg  .fa-chevron-right {
-        display: block;
-    }
-}
 @media screen and (max-width:768px){
     .nav-logo {
         display: block;
@@ -266,49 +115,57 @@ a:visited {
     .nav-branch-logo {
         display: none;
     }
-    .AboutUs img {
-        width: 100%
-    }
-    .AboutUsText {
-        display: block;
-        height: auto;
-    }
-    .AboutUsImg {
-        padding-top: 2rem;
-    }
-    .AboutUsImg img{
-        width: 250px;
-    }
-    .AboutUsImg  .fa-chevron-left,
-    .AboutUsImg  .fa-chevron-right {
-        display: block;
-    }
+    
 }
 
+@keyframes navItem{
+    0% {
+        height:0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+@-webkit-keyframes navItem{
+    0% {
+        height:0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+/*-------TitlePart-------*/
 
-/*---*/
-.itemContainer {
-    position: relative;
+.TitlePart {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-top: 6rem;
+    text-align: center;
+    padding: 1.5rem 1rem ;
 }
-.itemImg {
-    position: relative;
-    display: block;
-    background-image:url(../img/itembackground.jpg);
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 1024px;
-    height: 550px;
+.TitlePart a{
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--primary-color);
 }
-.itemImg img:hover{
-    transition: all 1s ease;
-    transform: scale(1.1);
+.TitleDot {
+    border-radius: 50%;
+    background-color: var(--border-color);
+    width: 10px;
+    height: 10px;
+    margin: 1.2rem;
+    display: none;
 }
+@media screen and (max-width:768px){
+    .TitlePart img {
+        display: none;
+    }
+    .TitleDot {
+        display: block;
+    }
+}
+
+
+
 
 /*---*/
 .productContainer {
