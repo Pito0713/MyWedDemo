@@ -125,28 +125,59 @@
             </div>
         </div>
         <div class="itemGroup">
-                <div class="itemContent">
-                    <img src="../MyWedDemo/img/item-1.png" alt="item-1" width="10%">
-                    <a>balcony</a>
+            <div class="itemContent">
+                <div onclick="itemShow('desk')">
+                    <img class="itemContentImg" src="../MyWedDemo/img/item-1.png" alt="item-1">
+                    <a>放在桌上..</a>
                 </div>
-                <div class="itemContent">
-                    <img src="../MyWedDemo/img/item-2.png" alt="item-2" width="10%">
-                    <a>desk</a>
-                </div>
-                <div class="itemContent">
-                    <img src="../MyWedDemo/img/item-3.png" alt="item-3" width="10%">
-                    <a>Indoor plants</a>
-                </div>
-                <div class="itemContent">
-                    <img src="../MyWedDemo/img/item-4.png" alt="item-4" width="10%">
-                    <a>Show</a>
+                <div class="itemShow" id="desk">
+                    <div id="closeItemShow" onclick="closeItemShow('desk')">
+                        <i class="fas fa-times"></i>
+                    </div>
                 </div>
             </div>
+
+            <div class="itemContent">
+                <div onclick="itemShow('shelf')">
+                    <img class="itemContentImg" src="../MyWedDemo/img/item-2.png" alt="item-2">
+                    <a>放在書架..</a>
+                </div>
+                <div class="itemShow" id="shelf">
+                    <div id="closeItemShow" onclick="closeItemShow('shelf')">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="itemContent">
+                <div onclick="itemShow('indoor')">
+                    <img class="itemContentImg" src="../MyWedDemo/img/item-3.png" alt="item-3">
+                    <a>放在室內....
+                    </a>
+                </div>
+
+                <div class="itemShow" id="indoor">
+                    <div id="closeItemShow" onclick="closeItemShow('indoor')">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="itemContent">
+                <div onclick="itemShow('sill')">
+                    <img class="itemContentImg" src="../MyWedDemo/img/item-4.png" alt="item-4">
+                    <a>放在窗台..</a>
+                </div>
+
+                <div class="itemShow" id="sill">
+                    <div id="closeItemShow" onclick="closeItemShow('sill')">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
     <div class="productContainer">
         <div class="TitlePart">
-            <div class="TitleDot"></div>    
+            <div class="TitleDot"></div>
             <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
             <a>Prouduct</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
@@ -155,9 +186,9 @@
         <div class="productGroup">
             <div class="productCategory">
                 <div class="productCategoryList">熱銷</div>
-                <div class="productCategoryList" onclick="Catch('Succulents')">多肉</div>
-                <div class="productCategoryList" onclick="Catch('Cactus')">仙人掌</div>
-                <div class="productCategoryList" onclick="Catch('Cultivation')">栽培器具</div>
+                <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
+                <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
+                <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
             </div>
             <div class="prodcutList" id="prodcutList">
                 <div class="prodcutinfo-primary">
@@ -169,9 +200,11 @@
         </div>
 
     </div>
+
     <script src="../MyWedDemo/JS/all.js"></script>
     <script src="../MyWedDemo/JS/carousel.js"></script>
     <script src="../MyWedDemo/JS/Product.js"></script>
+    <script src="../MyWedDemo/Js/item.js"></script>
 </body>
 
 </html>

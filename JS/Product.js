@@ -17,14 +17,14 @@ fetch(Prodcut)
 })
 .then((myJson) => {
     console.log(myJson)
-    catchItem(myJson);
+    productItem(myJson);
 });
 
 
 
-function catchItem(myJson){
-    a = Array.from(myJson);
-    product = a[0];
+function productItem(myJson){
+    productItem = Array.from(myJson);
+    product = productItem[0];
         document.getElementById("prodcutinfo-header").innerHTML  += "<div class='prodcutItem'>"+
             "<div class='prodcutItemPoint' + id="+ product.id +">"+
             "<img src="+ product.img +">"+
@@ -38,7 +38,7 @@ function catchItem(myJson){
             "</div>"+
             "</div>"
         for(let i = 1; i<3;i++){
-            product = a[i];
+            product = productItem[i];
             var content = product.content;
             var id = product.id;
             var img = product.img;
@@ -57,8 +57,8 @@ function catchItem(myJson){
             "</div>"+
             "</div>"
             }    
-        for(let i = 3; i<a.length;i++){
-            product = a[i];
+        for(let i = 3; i<productItem.length;i++){
+            product = productItem[i];
             var content = product.content;
             var id = product.id;
             var img = product.img;
@@ -79,10 +79,11 @@ function catchItem(myJson){
         }
 }
 
-Catch = function (items){
-    console.log(a);
-    var data = a.filter(function(item){ 
-        return item.id == items;
+CatchProductItem = function (CatchProductId){
+    console.log(CatchProductId);
+    var data = productItem.filter(
+        function(item){ 
+        return item.id == CatchProductId;
     });
     console.log(data);
     document.getElementById("prodcutinfo-header").innerHTML = "";

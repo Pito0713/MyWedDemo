@@ -1,12 +1,15 @@
 
 .itemContainer {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
 }
 .itemImg {
     position: relative;
     display: block;
-    background-image:url(../img/itembackground.jpg);
+    background-image:url(../img/itembackground.jpeg);
     background-repeat:no-repeat;
     background-position: center;
     background-size: contain;
@@ -24,10 +27,48 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem 3rem;
     color: var(--text-color);
-    font-size: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 5px 5px var(--primary-color);
+    cursor: pointer;
 }
+.itemContent a{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.itemContent .itemContentImg {
+    width: 50px;
+    height: 70px;
+}
+.itemShowContainer {
+    display: block !important;
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    top: 0; left: 0;
+    background: rgba(0,0,0,.6);
+}
+.itemShowImg {
+    position: fixed;
+    top: 10%;
+    left: 7%;
+    margin: 30px;
+    align-self: center;
+    object-fit: contain;
+    z-index: 6;
+    max-width: 80%;
+}
+.itemShow{
+    display: none;
+}
+.itemShow i{
+    font-size: 2rem;
+}
+
 @media screen and (max-width:1024px){
     .itemImg {
         display: none;
