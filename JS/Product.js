@@ -81,10 +81,15 @@ function productItem(myJson){
 
 CatchProductItem = function (CatchProductId){
     console.log(CatchProductId);
-    var data = productItem.filter(
-        function(item){ 
-        return item.id == CatchProductId;
-    });
+    if(CatchProductId=='All'){
+        data = productItem;
+    } else {
+        data = productItem.filter(
+            function(item){ 
+            return item.id == CatchProductId;
+        });
+    }
+
     console.log(data);
     document.getElementById("prodcutinfo-header").innerHTML = "";
     document.getElementById("prodcutinfo-sider").innerHTML = "";

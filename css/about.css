@@ -3,15 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 .AboutUsContainer {
     position: relative;
-    padding: 4rem;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    width: 1024px;
-    height: 550px;
 }
 .AboutUsText {
     display: block;
@@ -46,7 +42,7 @@
     width: 300px;
     height: 230px;
     float: left;
-    padding: 0.3rem;
+    padding: 0.5rem;
 }
 
 
@@ -87,14 +83,10 @@
     .AboutUsContainer{
         display: block;
         position: relative;
-        width: 100%;
-        height: auto;
     }
     .AboutUsImg {
         position: relative;
-        width: 100%;
         display: flex;
-        left: 0%;
         justify-content: center;
         align-items: center;
     }

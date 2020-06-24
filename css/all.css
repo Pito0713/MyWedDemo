@@ -86,9 +86,9 @@ a:visited {
 }
 .homePage{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2rem;
 }
 .homePageBackGround {
     background-image: url(../img/homePage.jpg);
@@ -138,7 +138,9 @@ a:visited {
 
 .TitlePart {
     display: flex;
+    position: relative;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 1.5rem 1rem ;
 }
@@ -167,69 +169,45 @@ a:visited {
 
 
 
-/*---*/
-.productContainer {
-    position: relative;
+
+@media screen and (min-width:1440px){
+    .container{
+        width: 1440px;
+    }
+}
+@media screen and (max-width:1441px){
+    .container{
+        width: 1024px;
+    }
+}
+@media screen and (max-width:1025px){
+    .container{
+        width: 768px;
+    }
+}
+@media screen and (max-width:769px){
+    .container{
+        width: 576px;
+    }
+}
+@media screen and (max-width:577px){
+    .container{
+        width: 480px;
+    }
+}
+@media screen and (max-width:481px){
+    .container{
+        width: 320px;
+    }
+}
+@media screen and (max-width:321px){
+    .container{
+        width: 240px;
+    }
+}
+.container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
-}
-.productCategory {
-    display: flex;
-    padding: 1rem 2rem;
-}
-.productCategoryList {
-    padding: 0rem 2rem;
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-}
-.prodcutList {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-.prodcutinfo-primary{
-    display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-}
-.productinfo{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.prodcutItem{
-    padding: 1rem;
-}
-.prodcutItemPoint {
-    display: block;
-    position: relative;
-}
-.prodcutItemPoint img{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-}
-.prodcutItemName {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-}
-.prodcutItemPrice{
-    font-size: 2rem;
-}
-.prodcutItemContent {
-    font-size: 0.5rem;
-}
-.prodcutItemName-Primary {
-    display: flex;
-    justify-content: space-between;
-    font-size: 2rem;
-}
-.prodcutItemPrice-Primary {
-    font-size: 3rem;
-}
-.prodcutItemContent-Primary {
-    font-size: 1rem;
+    overflow: auto;
 }
