@@ -108,74 +108,129 @@
     </div>
     <div class="Item">
         <div class="container">
-            <div class="itemImg">
-                <div style="top:40%; 
-                        left:10%;
-                        position:absolute;">
-                    <img src="../MyWedDemo/img/item-1.png" alt="item-1" width="20%">
+            <div class="itemPointImg">
+                <div style="top:42%; 
+                        left:12%;
+                        position:absolute;
+                        width:50px;
+                        height:50px;">
+                    <img class="itemImg" onclick="itemShow('deskShow'); CarouselShow('desk',0);"
+                        src="../MyWedDemo/img/item-1.png" alt="item-1" width="100%">
                 </div>
-                <div style="top:22%; 
+                <div style="top:21%; 
                         left:40%;
-                        position:absolute;">
-                    <img src="../MyWedDemo/img/item-2.png" alt="item-2" width="20%">
+                        position:absolute;
+                        width:50px;
+                        height:50px;">
+                    <img class="itemImg" onclick="itemShow('shelfShow'); CarouselShow('shelf',0);"  src="../MyWedDemo/img/item-2.png" alt="item-2" width="100%">
                 </div>
-                <div style="top:45%; 
+                <div style="top:50%; 
                         left:72%;
-                        position:absolute;">
-                    <img src="../MyWedDemo/img/item-3.png" alt="item-3" width="50%">
+                        position:absolute;
+                        width:50px;
+                        height:50px;">
+                    <img class="itemImg" onclick="itemShow('indoorShow'); CarouselShow('indoor',0);" src="../MyWedDemo/img/item-3.png" alt="item-3" width="180%">
                 </div>
                 <div style="top:30%; 
                         left:80%;
-                        position:absolute;">
-                    <img src="../MyWedDemo/img/item-4.png" alt="item-4" width="25%">
+                        position:absolute;
+                        width:50px;
+                        height:50px;">
+                    <img class="itemImg" onclick="itemShow('sillShow'); CarouselShow('sill',0);" src="../MyWedDemo/img/item-4.png" alt="item-4" width="100%">
                 </div>
             </div>
             <div class="itemGroup">
                 <div class="itemContent">
-                    <div onclick="itemShow('desk')">
+                    <div onclick="itemShow('deskShow'); CarouselShow('desk',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-1.png" alt="item-1">
                         <a>放在桌上..</a>
                     </div>
-                    <div class="itemShow" id="desk">
-                        <div id="closeItemShow" onclick="closeItemShow('desk')">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="itemContent">
-                    <div onclick="itemShow('shelf')">
+                    <div onclick="itemShow('shelfShow'); CarouselShow('shelf',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-2.png" alt="item-2">
                         <a>放在書架..</a>
                     </div>
-                    <div class="itemShow" id="shelf">
-                        <div id="closeItemShow" onclick="closeItemShow('shelf')">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="itemContent">
-                    <div onclick="itemShow('indoor')">
+                    <div onclick="itemShow('indoorShow'); CarouselShow('indoor',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-3.png" alt="item-3">
                         <a>放在室內....
                         </a>
                     </div>
-                    <div class="itemShow" id="indoor">
-                        <div id="closeItemShow" onclick="closeItemShow('indoor')">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="itemContent">
-                    <div onclick="itemShow('sill')">
+                    <div onclick="itemShow('sillShow'); CarouselShow('sill',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-4.png" alt="item-4">
                         <a>放在窗台..</a>
                     </div>
-                    <div class="itemShow" id="sill">
-                        <div id="closeItemShow" onclick="closeItemShow('sill')">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
+
                 </div>
+            </div>
+            <div class="itemShow" id="deskShow">
+                <div class="closeItemShow" id="closeItemShow" onclick="closeItemShow('deskShow')">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="leftarrowIcon" onclick="CarouselShow('desk',-1);">
+                    <span>
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                </div>
+                <div class="rightarrowIcon" onclick="CarouselShow('desk',1);">
+                    <span>
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="itemShowImgContainer" id="desk"></div>
+            </div>
+            <div class="itemShow" id="shelfShow">
+                <div class="closeItemShow" id="closeItemShow" onclick="closeItemShow('shelfShow')">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="leftarrowIcon" onclick="CarouselShow('shelf',-1);">
+                    <span>
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                </div>
+                <div class="rightarrowIcon" onclick="CarouselShow('shelf',1);">
+                    <span>
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="itemShowImgContainer" id="shelf"></div>
+            </div>
+            <div class="itemShow" id="indoorShow">
+                <div class="closeItemShow" id="closeItemShow" onclick="closeItemShow('indoorShow')">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="leftarrowIcon" onclick="CarouselShow('indoor',-1);">
+                    <span>
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                </div>
+                <div class="rightarrowIcon" onclick="CarouselShow('indoor',1);">
+                    <span>
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="itemShowImgContainer" id="indoor"></div>
+            </div>
+            <div class="itemShow" id="sillShow">
+                <div class="closeItemShow" id="closeItemShow" onclick="closeItemShow('sillShow')">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="leftarrowIcon" onclick="CarouselShow('sill',-1);">
+                    <span>
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                </div>
+                <div class="rightarrowIcon" onclick="CarouselShow('sill',1);">
+                    <span>
+                        <i class="fas fa-angle-right"></i>
+                    </span>
+                </div>
+                <div class="itemShowImgContainer" id="sill"></div>
             </div>
         </div>
     </div>
@@ -190,23 +245,23 @@
     </div>
     <div class="productContainer">
         <div class="container">
-                <div class="productGroup">
-                        <div class="productCategory">
-                            <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
-                            <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
-                            <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
-                            <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
-                        </div>
-                        <div class="prodcutList" id="prodcutList">
-                            <div class="prodcutinfo-primary">
-                                <div class="prodcutinfo-header" id="prodcutinfo-header"></div>
-                                <div class="prodcutinfo-sider" id="prodcutinfo-sider"></div>
-                            </div>
-                            <div class="productinfo" id="productinfo"></div>
-                        </div>
+            <div class="productGroup">
+                <div class="productCategory">
+                    <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
+                </div>
+                <div class="prodcutList" id="prodcutList">
+                    <div class="prodcutinfo-primary">
+                        <div class="prodcutinfo-header" id="prodcutinfo-header"></div>
+                        <div class="prodcutinfo-sider" id="prodcutinfo-sider"></div>
                     </div>
+                    <div class="productinfo" id="productinfo"></div>
+                </div>
+            </div>
         </div>
-        
+
 
     </div>
 
