@@ -27,22 +27,22 @@
         </div>
         <ul class="nav-branch">
             <li class="nav-items">
-                <i class="fas fa-home"></i>
+                <!--<i class="fas fa-home"></i>-->
                 <div>首&nbsp&nbsp&nbsp頁</div>
             </li>
             <li class="nav-items">
-                <i class="fas fa-dumpster-fire"></i>
+                <!--<i class="fas fa-dumpster-fire"></i>-->                
                 <div>商&nbsp&nbsp&nbsp品</div>
             </li>
             <li class="nav-branch-logo">
                 <img src="../MyWedDemo/img/Homelogo.png" alt="Logo" width="45px" height="45px">
             </li>
             <li class="nav-items">
-                <i class="fas fa-chalkboard-teacher"></i>
+                <!--<i class="fas fa-chalkboard-teacher"></i>--->
                 <div>關&nbsp&nbsp&nbsp於</div>
             </li>
             <li class="nav-items">
-                <i class="fas fa-child"></i>
+                <!--<i class="fas fa-child"></i>-->
                 <div>會&nbsp&nbsp&nbsp員</div>
             </li>
         </ul>
@@ -51,10 +51,39 @@
         <div class="homePageBackGround"></div>
     </div>
     <div class="TitlePart">
+            <div class="container">
+                <div class="TitleDot"></div>
+                <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
+                <a>商品 Prouduct </a>
+                <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
+                <div class="TitleDot"></div>
+            </div>
+        </div>
+        <div class="productContainer">
+            <div class="container">
+                <div class="productGroup">
+                    <div class="productCategory">
+                        <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
+                    </div>
+                    <div class="prodcutList" id="prodcutList">
+                        <div class="prodcutinfo-primary">
+                            <div class="prodcutinfo-header" id="prodcutinfo-header"></div>
+                            <div class="prodcutinfo-sider" id="prodcutinfo-sider"></div>
+                        </div>
+                        <div class="productinfo" id="productinfo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="TitlePart">
         <div class="container">
             <div class="TitleDot"></div>
             <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-            <a>About US</a>
+            <a>關於我們 About Us</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
             <div class="TitleDot"></div>
         </div>
@@ -101,7 +130,7 @@
         <div class="container">
             <div class="TitleDot"></div>
             <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-            <a>Item Group</a>
+            <a>CRAFT 可以這樣擺</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
             <div class="TitleDot"></div>
         </div>
@@ -143,19 +172,19 @@
                 <div class="itemContent">
                     <div onclick="itemShow('deskShow'); CarouselShow('desk',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-1.png" alt="item-1">
-                        <a>放在桌上..</a>
+                        <a>在桌上</a>
                     </div>
                 </div>
                 <div class="itemContent">
                     <div onclick="itemShow('shelfShow'); CarouselShow('shelf',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-2.png" alt="item-2">
-                        <a>放在書架..</a>
+                        <a>在書架</a>
                     </div>
                 </div>
                 <div class="itemContent">
                     <div onclick="itemShow('indoorShow'); CarouselShow('indoor',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-3.png" alt="item-3">
-                        <a>放在室內....
+                        <a>在室內
                         </a>
                     </div>
 
@@ -163,7 +192,7 @@
                 <div class="itemContent">
                     <div onclick="itemShow('sillShow'); CarouselShow('sill',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-4.png" alt="item-4">
-                        <a>放在窗台..</a>
+                        <a>在窗台</a>
                     </div>
 
                 </div>
@@ -233,36 +262,6 @@
                 <div class="itemShowImgContainer" id="sill"></div>
             </div>
         </div>
-    </div>
-    <div class="TitlePart">
-        <div class="container">
-            <div class="TitleDot"></div>
-            <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-            <a>Prouduct</a>
-            <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
-            <div class="TitleDot"></div>
-        </div>
-    </div>
-    <div class="productContainer">
-        <div class="container">
-            <div class="productGroup">
-                <div class="productCategory">
-                    <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
-                </div>
-                <div class="prodcutList" id="prodcutList">
-                    <div class="prodcutinfo-primary">
-                        <div class="prodcutinfo-header" id="prodcutinfo-header"></div>
-                        <div class="prodcutinfo-sider" id="prodcutinfo-sider"></div>
-                    </div>
-                    <div class="productinfo" id="productinfo"></div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
     <script src="../MyWedDemo/JS/all.js"></script>
