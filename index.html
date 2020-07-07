@@ -59,7 +59,7 @@
                 <div class="TitleDot"></div>
             </div>
         </div>
-        <div class="productContainer">
+        <div class="product">
             <div class="container">
                 <div class="productGroup">
                     <div class="productCategory">
@@ -69,11 +69,10 @@
                         <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
                     </div>
                     <div class="prodcutList" id="prodcutList">
-                        <div class="prodcutinfo-primary">
-                            <div class="prodcutinfo-header" id="prodcutinfo-header"></div>
-                            <div class="prodcutinfo-sider" id="prodcutinfo-sider"></div>
-                        </div>
                         <div class="productinfo" id="productinfo"></div>
+                    </div>
+                    <div class="productPage" id="productPage">
+
                     </div>
                 </div>
             </div>
@@ -138,6 +137,13 @@
     <div class="Item">
         <div class="container">
             <div class="itemPointImg">
+                <div style="top:5%; 
+                    left:5%;
+                    position:absolute;
+                    width:300px;
+                    height:60px;"
+                    class="itemPointImgTitle">
+                </div>
                 <div style="top:42%; 
                         left:12%;
                         position:absolute;
@@ -172,19 +178,19 @@
                 <div class="itemContent">
                     <div onclick="itemShow('deskShow'); CarouselShow('desk',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-1.png" alt="item-1">
-                        <a>在桌上</a>
+                        <a>桌上</a>
                     </div>
                 </div>
                 <div class="itemContent">
                     <div onclick="itemShow('shelfShow'); CarouselShow('shelf',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-2.png" alt="item-2">
-                        <a>在書架</a>
+                        <a>書架</a>
                     </div>
                 </div>
                 <div class="itemContent">
                     <div onclick="itemShow('indoorShow'); CarouselShow('indoor',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-3.png" alt="item-3">
-                        <a>在室內
+                        <a>室內
                         </a>
                     </div>
 
@@ -192,7 +198,7 @@
                 <div class="itemContent">
                     <div onclick="itemShow('sillShow'); CarouselShow('sill',0);">
                         <img class="itemContentImg" src="../MyWedDemo/img/item-4.png" alt="item-4">
-                        <a>在窗台</a>
+                        <a>窗台</a>
                     </div>
 
                 </div>

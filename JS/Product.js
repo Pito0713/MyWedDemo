@@ -20,12 +20,29 @@ fetch(Prodcut, {method: 'get'})
   pagination(jsonData, 1);
 })
 
+var screenWidth = document.documentElement.clientWidth
+
+window.onresize = function () {
+    var _this = this
+    _this.screenWidth = document.documentElement.clientWidth; // 視窗寬度
+};
+
 function pagination(jsonData, currentPage) {
     // 全部資料
     const dataTotal = jsonData.length;
 
-    // 每一頁顯示8筆資料。
-    const datapage = 8;
+    // 每一頁顯示幾筆資料。
+    var datapage 
+
+    if (screenWidth > 1024) {
+      console.log(screenWidth)
+      datapage = 8;
+    } else if(screenWidth > 760){
+      datapage = 6;
+    } else{
+      datapage = 3;
+    }
+    
     
     // 總共有幾頁//每頁8個
     const pageTotal = Math.ceil(dataTotal / datapage);
@@ -60,13 +77,16 @@ function pagination(jsonData, currentPage) {
     displayData(data);
   }
   function pageSelect (page){
+    document.getElementById("productinfo").innerHTML = "";
     let str = '';
 
     if(page.currentPage > 1) {
       //建立page的data 
-      str += `<a data-page="${(page.currentPage) - 1}">Previous</a>`;
+      //當currentPage 不是第一頁時
+      //執行dataset
+      str += `<a data-page="${(page.currentPage) - 1}">上一頁</a>`;
     } else {
-      str += `<span >Previous</span>`;
+      str += `<span >上一頁</span>`;
     }
     
     for(let i = 1; i <= page.pageTotal; i++){
@@ -74,13 +94,15 @@ function pagination(jsonData, currentPage) {
     };
   
     if(page.currentPage < page.pageTotal) {
-      //建立page的data  
-      str += `<a data-page="${(page.currentPage) + 1}">Next</a>`;
+      //建立page的data
+      //當currentPage 還沒到最後一頁
+      //都執行dataset
+      str += `<a data-page="${(page.currentPage) + 1}">下一頁</a>`;
     } else {
-      str += `<span >Next</span>`;
+      str += `<span >下一頁</span>`;
     }
     //寫入
-    document.getElementById("productinfo").innerHTML  = str;
+    document.getElementById("productPage").innerHTML  = str;
   }
   function displayData(data) {
     //把data重新排列成array
@@ -116,7 +138,7 @@ function pagination(jsonData, currentPage) {
     pagination(jsonData, page);
   }
   //寫入監聽只要標籤名稱<a>都可以有這監聽
-  document.getElementById("productinfo").addEventListener('click', switchPage);
+  document.getElementById("productPage").addEventListener('click', switchPage);
 
 CatchProductItem = function (CatchProductId){
     console.log(CatchProductId);
@@ -134,4 +156,3 @@ CatchProductItem = function (CatchProductId){
     }
     pagination(catchData, 1)
 }
-
