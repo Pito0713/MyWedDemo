@@ -31,7 +31,7 @@
                 <div>首&nbsp&nbsp&nbsp頁</div>
             </li>
             <li class="nav-items">
-                <!--<i class="fas fa-dumpster-fire"></i>-->                
+                <!--<i class="fas fa-dumpster-fire"></i>-->
                 <div>商&nbsp&nbsp&nbsp品</div>
             </li>
             <li class="nav-branch-logo">
@@ -51,33 +51,37 @@
         <div class="homePageBackGround"></div>
     </div>
     <div class="TitlePart">
-            <div class="container">
-                <div class="TitleDot"></div>
-                <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-                <a>商品 Prouduct </a>
-                <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
-                <div class="TitleDot"></div>
-            </div>
+        <div class="container">
+            <div class="TitleDot"></div>
+            <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
+            <a>商品 Prouduct </a>
+            <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
+            <div class="TitleDot"></div>
         </div>
-        <div class="product">
-            <div class="container">
-                <div class="productGroup">
-                    <div class="productCategory">
-                        <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
-                        <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
-                        <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
-                        <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
-                    </div>
-                    <div class="prodcutList" id="prodcutList">
-                        <div class="productinfo" id="productinfo"></div>
-                    </div>
-                    <div class="productPage" id="productPage">
-
-                    </div>
+    </div>
+    <div class="product">
+        <div class="container">
+            <div class="productItemGroup">
+                <div class="productCategory">
+                    <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
+                </div>
+                <div class="prodcutList" id="prodcutList">
+                    <div class="productinfo" id="productinfo"></div>
+                </div>
+                <div class="productPage" id="productPage">
                 </div>
             </div>
+            <div class="productItemCarousel" id="productItemCarousel">
+            
+                    
+                
+            </div>
         </div>
-    
+    </div>
+
     <div class="TitlePart">
         <div class="container">
             <div class="TitleDot"></div>
@@ -141,8 +145,7 @@
                     left:5%;
                     position:absolute;
                     width:300px;
-                    height:60px;"
-                    class="itemPointImgTitle">
+                    height:60px;" class="itemPointImgTitle">
                 </div>
                 <div style="top:42%; 
                         left:12%;
@@ -157,21 +160,24 @@
                         position:absolute;
                         width:50px;
                         height:50px;">
-                    <img class="itemImg" onclick="itemShow('shelfShow'); CarouselShow('shelf',0);"  src="../MyWedDemo/img/item-2.png" alt="item-2" width="100%">
+                    <img class="itemImg" onclick="itemShow('shelfShow'); CarouselShow('shelf',0);"
+                        src="../MyWedDemo/img/item-2.png" alt="item-2" width="100%">
                 </div>
                 <div style="top:50%; 
                         left:72%;
                         position:absolute;
                         width:50px;
                         height:50px;">
-                    <img class="itemImg" onclick="itemShow('indoorShow'); CarouselShow('indoor',0);" src="../MyWedDemo/img/item-3.png" alt="item-3" width="180%">
+                    <img class="itemImg" onclick="itemShow('indoorShow'); CarouselShow('indoor',0);"
+                        src="../MyWedDemo/img/item-3.png" alt="item-3" width="180%">
                 </div>
                 <div style="top:30%; 
                         left:80%;
                         position:absolute;
                         width:50px;
                         height:50px;">
-                    <img class="itemImg" onclick="itemShow('sillShow'); CarouselShow('sill',0);" src="../MyWedDemo/img/item-4.png" alt="item-4" width="100%">
+                    <img class="itemImg" onclick="itemShow('sillShow'); CarouselShow('sill',0);"
+                        src="../MyWedDemo/img/item-4.png" alt="item-4" width="100%">
                 </div>
             </div>
             <div class="itemGroup">

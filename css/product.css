@@ -6,9 +6,17 @@
     justify-content: center;
     align-items: center;
 }
-.productGroup {
+.product .container{
+    align-items: flex-start;
+}
+.productItemGroup {
     display: block;
     position: relative;
+    flex: 2 1 60%;
+}
+.productItemCarousel{
+    flex: 1 2 40%;
+    padding: 2rem;
 }
 .productCategory {
     display: flex;
@@ -29,16 +37,13 @@
     display: flex;
     flex-wrap: wrap;
 }
-.prodcutinfo-primary{
-    display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-}
+
 .productinfo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
 }
 .prodcutItem{
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .prodcutItemPoint {
     display: block;
@@ -49,6 +54,7 @@
     height: 150px;
     object-fit:cover;
 }
+
 .prodcutItemName {
     display: flex;
     justify-content: space-between;
@@ -58,6 +64,18 @@
 .prodcutItemContent {
     font-size: 0.5rem;
 }
+.productItemCarousel img{
+    width: 100%;
+}
+.productItemCarouselName{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productItemCarouselPrice{
+    font-size: 1.5rem;
+}
 
 .productPage {
     width: 50%;
@@ -66,21 +84,39 @@
     justify-content: space-between;
     align-items: center;
 }
-
 @media screen and (max-width: 1024px){
-    .productinfo{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    .product .container{
+        align-items: center;
     }
 }
-@media screen and (max-width: 769px){
-    .productinfo{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+@media screen and (max-width: 768px){
+    .productItemCarouselName{
+        display: none;
+    }
+    .productItemCarouselPrice{
+        display: none;
+    }
+    .prodcutItemCarouselContent {
+        display: none;
+    }
+    .product .container{
+        align-items: center;
+    }
+    .product .container{
+        flex-direction: column;
+    }
+    .productItemCarousel{
+        order: 1;
+        padding: 0;
+    }
+    .productItemCarousel img{
+        height: 220px;
+    }
+    .productItemGroup{
+        order: 2;
     }
 }
+
 @media screen and (max-width: 576px){
     .prodcutinfo-primary{
         display: block;
@@ -91,5 +127,6 @@
     .productCategoryList{
         height: 100px;
         padding: 0 1.5rem;
+        font-size: 0.5rem;
     }  
 }
