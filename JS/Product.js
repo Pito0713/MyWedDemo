@@ -37,16 +37,14 @@ function pagination(jsonData, currentPage) {
   const dataTotal = jsonData.length;
 
   // 每一頁顯示幾筆資料。
-  var datapage = 4;
+  var datapage ;
 
-  //if (screenWidth > 1024) {
-    //console.log(screenWidth)
-    //datapage = 2;
-  //} else if (screenWidth > 760) {
-    //datapage = 3;
-  //} else {
-    //datapage = 2;
-  //}
+  if (screenWidth > 481) {
+    console.log(screenWidth)
+    datapage = 4;
+  } else {
+    datapage = 2;
+  }
 
 
   // 總共有幾頁//每頁8個

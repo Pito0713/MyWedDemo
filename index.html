@@ -63,10 +63,18 @@
         <div class="container">
             <div class="productItemGroup">
                 <div class="productCategory">
-                    <div class="productCategoryList" onclick="CatchProductItem('All')">熱銷</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Succulents')">多肉</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Cactus')">仙人掌</div>
-                    <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">栽培器具</div>
+                    <div class="productCategoryList" onclick="CatchProductItem('All')">
+                        <a>熱銷</a>
+                    </div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Succulents')">
+                        <a>多肉</a>
+                    </div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cactus')">
+                        <a>仙人掌</a>
+                    </div>
+                    <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">
+                        <a>栽培器具</a>
+                    </div>
                 </div>
                 <div class="prodcutList" id="prodcutList">
                     <div class="productinfo" id="productinfo"></div>
@@ -75,18 +83,14 @@
                 </div>
             </div>
             <div class="productItemCarousel" id="productItemCarousel">
-            
-                    
-                
             </div>
         </div>
     </div>
-
     <div class="TitlePart">
         <div class="container">
             <div class="TitleDot"></div>
             <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-            <a>關於我們 About Us</a>
+            <a>關於 About Us</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
             <div class="TitleDot"></div>
         </div>
@@ -125,7 +129,6 @@
                 </div>
                 <i class="fas fa-chevron-down" id="nextDown"></i>
                 <i class="fas fa-chevron-right" id="nextRight"></i>
-
             </div>
         </div>
     </div>
@@ -133,7 +136,7 @@
         <div class="container">
             <div class="TitleDot"></div>
             <img src="../MyWedDemo/img/borderLine2-1.png" alt="" width="30%">
-            <a>CRAFT 可以這樣擺</a>
+            <a>CRAFT 創造生活</a>
             <img src="../MyWedDemo/img/borderLine2.png" alt="" width="30%">
             <div class="TitleDot"></div>
         </div>
@@ -141,14 +144,9 @@
     <div class="Item">
         <div class="container">
             <div class="itemPointImg">
-                <div style="top:5%; 
-                    left:5%;
-                    position:absolute;
-                    width:300px;
-                    height:60px;" class="itemPointImgTitle">
-                </div>
+                <img class="itemPointBackgroudImg" src="./img/itembackground.jpeg">
                 <div style="top:42%; 
-                        left:12%;
+                        left:10%;
                         position:absolute;
                         width:50px;
                         height:50px;">
@@ -164,12 +162,12 @@
                         src="../MyWedDemo/img/item-2.png" alt="item-2" width="100%">
                 </div>
                 <div style="top:50%; 
-                        left:72%;
+                        left:75%;
                         position:absolute;
-                        width:50px;
-                        height:50px;">
+                        width:120px;
+                        height:120px;">
                     <img class="itemImg" onclick="itemShow('indoorShow'); CarouselShow('indoor',0);"
-                        src="../MyWedDemo/img/item-3.png" alt="item-3" width="180%">
+                        src="../MyWedDemo/img/item-3.png" alt="item-3" width="100%">
                 </div>
                 <div style="top:30%; 
                         left:80%;
@@ -178,35 +176,6 @@
                         height:50px;">
                     <img class="itemImg" onclick="itemShow('sillShow'); CarouselShow('sill',0);"
                         src="../MyWedDemo/img/item-4.png" alt="item-4" width="100%">
-                </div>
-            </div>
-            <div class="itemGroup">
-                <div class="itemContent">
-                    <div onclick="itemShow('deskShow'); CarouselShow('desk',0);">
-                        <img class="itemContentImg" src="../MyWedDemo/img/item-1.png" alt="item-1">
-                        <a>桌上</a>
-                    </div>
-                </div>
-                <div class="itemContent">
-                    <div onclick="itemShow('shelfShow'); CarouselShow('shelf',0);">
-                        <img class="itemContentImg" src="../MyWedDemo/img/item-2.png" alt="item-2">
-                        <a>書架</a>
-                    </div>
-                </div>
-                <div class="itemContent">
-                    <div onclick="itemShow('indoorShow'); CarouselShow('indoor',0);">
-                        <img class="itemContentImg" src="../MyWedDemo/img/item-3.png" alt="item-3">
-                        <a>室內
-                        </a>
-                    </div>
-
-                </div>
-                <div class="itemContent">
-                    <div onclick="itemShow('sillShow'); CarouselShow('sill',0);">
-                        <img class="itemContentImg" src="../MyWedDemo/img/item-4.png" alt="item-4">
-                        <a>窗台</a>
-                    </div>
-
                 </div>
             </div>
             <div class="itemShow" id="deskShow">
@@ -275,6 +244,8 @@
             </div>
         </div>
     </div>
+    <div></div>
+
 
     <script src="../MyWedDemo/JS/all.js"></script>
     <script src="../MyWedDemo/JS/carousel.js"></script>
