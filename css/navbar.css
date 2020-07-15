@@ -1,0 +1,99 @@
+/*--------Nav----------*/
+.navbar {
+    display: block;
+    position: relative;
+}
+.nav-logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 47%;
+    display: none;
+}
+.nav-branch {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    list-style: none;
+    font-size: 0.9rem;
+    transition: all 1s ease;
+}
+.nav-branch .nav-branch-logo,
+.nav-branch .nav-items {
+    position: relative;
+    padding: 0rem 1rem;
+    margin: 1px;
+    text-align: center;
+}
+.nav-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2r
+}
+.nav-items:first-child{
+    border-right: 1px solid var(--border-color);
+}
+.nav-items:nth-child(4){
+    border-right: 1px solid var(--border-color);
+}
+.nav-items  div{
+    padding:0 2rem;
+    font-size: 1rem;
+}
+.nav-active {
+    display: block !important;
+}
+/*--------Nav-Burger----------*/
+.nav-burger {
+    display: none;
+    position: relative;
+    padding: 1.3rem 1rem;
+    cursor: pointer;
+}
+.burger-line {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 3px;
+    background-color: black;
+}
+
+
+@media screen and (max-width:768px){
+    .nav-logo {
+        display: block;
+    }
+    .nav-branch {
+        display: none ;
+    }
+    .nav-branch .nav-items {
+        padding: 1rem 1rem;
+    }
+    .nav-burger {
+        display: block !important;
+    }
+    .nav-branch-logo {
+        display: none;
+    }
+    
+}
+
+@keyframes navItem{
+    0% {
+        height:0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+@-webkit-keyframes navItem{
+    0% {
+        height:0;
+    }
+    100% {
+        height: 100%;
+    }
+}

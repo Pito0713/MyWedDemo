@@ -12,7 +12,6 @@
 .AboutUsText {
     display: block;
     line-height: 2rem;
-    padding: 0.5rem;
 }
 .AboutUsText img {
     max-width: 100%;
@@ -20,7 +19,6 @@
 .AboutUsImg {
     position: relative;
     display: block;
-    padding: 0.5rem;
 }
 .AboutUsImg .Img {
     position: relative;
@@ -125,4 +123,10 @@
     .AboutUsImg  .fa-chevron-right {
         display: block;
     }
+}
+@media screen and (max-width: 481px){
+    .AboutUs .container {
+        width: 100%;
+    }
+
 }

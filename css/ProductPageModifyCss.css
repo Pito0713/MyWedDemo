@@ -1,0 +1,23 @@
+.productCategory{
+    display: block;
+    flex: 2 1 20%;
+    padding:0rem;
+}
+.productCategoryList {
+    font-size: 1.2rem;
+    padding: 1rem ;
+    border-left: 0px;
+    cursor: pointer;
+}
+.productCategoryList:hover {
+    border-left: 1px solid var(--border-color);
+
+}
+.productItemGroup {
+    display: block;
+    position: relative;
+    flex: 2 1 80%;
+}
+.productCategory div:last-child {
+    border-right: 0;
+}

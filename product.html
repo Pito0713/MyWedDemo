@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pito Dome</title>
+    <!--Css-->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/ProductPageModifyCss.css">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/af0e7e3bea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-burger">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+        <div class="nav-logo">
+            <img src="../MyWedDemo/img/Homelogo.png" alt="Logo" width="45px" height="45px">
+        </div>
+        <ul class="nav-branch">
+            <li class="nav-items">
+                <!--<i class="fas fa-home"></i>-->
+                <div>
+                        <a href="./index.html">首&nbsp&nbsp&nbsp頁</a>
+                    </div>
+            </li>
+            <li class="nav-items">
+                <!--<i class="fas fa-dumpster-fire"></i>-->
+                <div>商&nbsp&nbsp&nbsp品</div>
+            </li>
+            <li class="nav-branch-logo">
+                <img src="../MyWedDemo/img/Homelogo.png" alt="Logo" width="45px" height="45px">
+            </li>
+            <li class="nav-items">
+                <!--<i class="fas fa-chalkboard-teacher"></i>--->
+                <div>關&nbsp&nbsp&nbsp於</div>
+            </li>
+            <li class="nav-items">
+                <!--<i class="fas fa-child"></i>-->
+                <div>會&nbsp&nbsp&nbsp員</div>
+            </li>
+        </ul>
+    </nav>
+    <div class="homePage">
+        <div class="homePageBackGround"></div>
+    </div>
+    <div class="TitlePart">
+        <div class="container">
+            <div class="TitleDot"></div>
+            <a>商品 Prouduct </a>
+            <div class="TitleDot"></div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="container">
+                <div class="productCategory">
+                        <div class="productCategoryList" onclick="CatchProductItem('All')">
+                            <a>熱銷</a>
+                        </div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Succulents')">
+                            <a>多肉</a>
+                        </div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Cactus')">
+                            <a>仙人掌</a>
+                        </div>
+                        <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">
+                            <a>栽培器具</a>
+                        </div>
+                    </div>
+            <div class="productItemGroup">
+                <div class="prodcutList" id="prodcutList">
+                    <div class="productinfo" id="productinfo"></div>
+                </div>
+                <div class="productPage" id="productPage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="Social">
+            <div> <a>Social------</a></div>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="far fa-envelope"></i>
+        </div>
+        <div class="location">
+            <div>
+                    <p>地址 / 彰化市大大區小小路 99 巷 9 號 9 樓</p>
+                    <p>電話 / 04-1234-5678</p>
+                    <p>營業時間 / 週一至週日 10:00 – 18:30</p>
+                    <div><a>location</a></div>
+            </div>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16111.725999238428!2d120.55013976880899!3d24.074115629465656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346938936a963bcb%3A0x7a4ca852c366fb95!2z5YWr5Y2m5bGx5aSn5L2b6aKo5pmv5Y2A!5e0!3m2!1szh-TW!2stw!4v1594738698726!5m2!1szh-TW!2stw"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+
+
+    <script src="../MyWedDemo/JS/all.js"></script>
+ 
+    <script src="../MyWedDemo/JS/Product.js"></script>
+
+
+</body>
+
+</html>
