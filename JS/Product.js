@@ -5,8 +5,6 @@ var Succulents = document.getElementById("Succulents")
 var Cultivation = document.getElementById("Cultivation")
 var Cactus = document.getElementById("Cactus")
 
-
-
 const Prodcut = "https://pito0713.github.io/Fetch/Product.json";
 
 const jsonData = {}
@@ -20,6 +18,7 @@ fetch(Prodcut, { method: 'get' })
     pagination(ProdcutData, 1);
   })
 
+
 //取的視窗空度
 var screenWidth = document.documentElement.clientWidth
 
@@ -27,8 +26,6 @@ window.onresize = function () {
   var _this = this
   _this.screenWidth = document.documentElement.clientWidth; // 視窗寬度
 };
-
-
 
 
 
@@ -115,7 +112,7 @@ function displayData(data) {
     var name = product.name;
     var price = product.price;
     document.getElementById("productinfo").innerHTML += "<div class='prodcutItem'>" +
-      "<div class='prodcutItemPoint' + id=" + id + ">" +
+      "<div class='prodcutItemPoint' "+"onclick='ProductPage("+i+")'"+ "id=" + id + ">" +
       "<img src=" + img + ">" +
       "<div class='prodcutItemName'>" +
       "<p href='#'>" + name + "</p>" +
@@ -156,4 +153,18 @@ CatchProductItem = function (CatchProductId) {
   pagination(catchData, 1)
 }
 
+var parameter = {};
+
+
+ProductPage = function(i) {
+  
+  var data = [[i]];
+  parameter = {
+    url: 'https://docs.google.com/spreadsheets/d/1DdvD5lRJKEdaquEFnJuOcLbJPFDAa5ohVYYv9FKIibE/edit#gid=0',
+    name: '工作表1',
+    data: data.toString(),
+  };
+  $.get('https://script.google.com/macros/s/AKfycbx-072NtScOpwqTuON17NYWrBxBaPVtB_GhLvNaCQXyIgb-zdbJ/exec',parameter);
+  window.location.href="../MyWedDemo/productSinglePage.html"
+};
 
