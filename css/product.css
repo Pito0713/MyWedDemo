@@ -135,3 +135,19 @@
     }
 
 }
+
+#loading{
+    display: none;
+    z-index: 10;
+    padding: 1rem;
+    background: var(--primary-color);
+    left: 40%;
+    top: 50%;
+    color: #fff;
+    position: fixed;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    border-radius: 5px;
+}

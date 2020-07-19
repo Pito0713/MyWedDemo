@@ -14,7 +14,6 @@ parameter = {
 };
 $.get('https://script.google.com/macros/s/AKfycbwng1qjqvSst7AyUvsT5_EyTwd-wZ5DEZJNMY0CXdhHbnwfaGFp/exec', parameter, function (data) {
   if (!data) {
-
     alert('無資料');
   } else {
     console.log(data);
@@ -32,17 +31,16 @@ $.get('https://script.google.com/macros/s/AKfycbwng1qjqvSst7AyUvsT5_EyTwd-wZ5DEZ
     console.log(data)
     productItem = Array.from(ProdcutData);
     console.log(productItem);
-    document.getElementById("prodcutItem").innerHTML += "<div class='prodcutItem'>" +
-      "<div class='prodcutItemPoint' + id=" + productItem[data].id + ">" +
-      "<img src=" + productItem[data].img + ">" +
-      "<div class='prodcutItemName'>" +
-      "<p href='#'>" + productItem[data].name + "</p>" +
-      "<p class='prodcutItemPrice'>$" + productItem[data].price + "</p>" +
-      "</div>" +
-      "<div class='prodcutItemContent'>" +
-      "<p>" + productItem[data].content + "</p>" +
-      "</div>" +
-      "</div>" +
+    document.getElementById("prodcutItem").innerHTML += 
+      "<div>" +
+       "<div class='productSinglePageInfo'>" +
+        "<img class='productSinglePageImg' src=" + productItem[data].img + ">" +
+        "<div>" +
+         "<a class='productSinglePageName'>" + productItem[data].name + "</a>" +
+         "<p>" + productItem[data].content + "</p>" +
+         "<a class='productSinglePagePrice'>$" + productItem[data].price + "</a>" +
+        "</div>" +
+       "</div>" +
       "</div>"
   }
 });

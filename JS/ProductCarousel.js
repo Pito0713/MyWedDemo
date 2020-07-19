@@ -44,7 +44,6 @@ function productCarousel(ProdcutData) {
             document.getElementById("productItemCarousel").innerHTML = "";
             product = productItem[i];
             var content = product.content;
-            var id = product.id;
             var img = product.img;
             var name = product.name;
             var price = product.price;

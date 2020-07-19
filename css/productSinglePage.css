@@ -1,0 +1,14 @@
+.productSinglePageImg {
+    max-width: 100%;
+}
+.productSinglePageInfo{
+    display: grid;
+    grid-template-columns: 3.5fr 2.5fr;
+    text-align: right;
+}
+.productSinglePageName{
+    font-size: 3rem;
+}
+.productSinglePagePrice{
+    font-size: 2rem;
+}

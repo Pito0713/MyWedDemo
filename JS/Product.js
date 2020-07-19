@@ -111,8 +111,9 @@ function displayData(data) {
     var img = product.img;
     var name = product.name;
     var price = product.price;
+    var number = product.no;
     document.getElementById("productinfo").innerHTML += "<div class='prodcutItem'>" +
-      "<div class='prodcutItemPoint' "+"onclick='ProductPage("+i+")'"+ "id=" + id + ">" +
+      "<div class='prodcutItemPoint' "+"onclick='ProductPage("+number+")'"+ "id=" + id + ">" +
       "<img src=" + img + ">" +
       "<div class='prodcutItemName'>" +
       "<p href='#'>" + name + "</p>" +
@@ -153,11 +154,11 @@ CatchProductItem = function (CatchProductId) {
   pagination(catchData, 1)
 }
 
+
+
 var parameter = {};
 
-
 ProductPage = function(i) {
-  
   var data = [[i]];
   parameter = {
     url: 'https://docs.google.com/spreadsheets/d/1DdvD5lRJKEdaquEFnJuOcLbJPFDAa5ohVYYv9FKIibE/edit#gid=0',
@@ -165,6 +166,9 @@ ProductPage = function(i) {
     data: data.toString(),
   };
   $.get('https://script.google.com/macros/s/AKfycbx-072NtScOpwqTuON17NYWrBxBaPVtB_GhLvNaCQXyIgb-zdbJ/exec',parameter);
-  window.location.href="../MyWedDemo/productSinglePage.html"
+  $('#loading').attr("style","display:block;"); 
+  window.setTimeout("window.location.href='../MyWedDemo/productSinglePage.html'",2000); 
+  
+  
 };
 
