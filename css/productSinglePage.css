@@ -7,8 +7,19 @@
     text-align: right;
 }
 .productSinglePageName{
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .productSinglePagePrice{
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:577px){
+    .productSinglePageInfo{
+        display: block;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 768px){
+.locationMap {
+    display: none;
+}
 }

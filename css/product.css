@@ -94,9 +94,6 @@
 }
 
 @media screen and (max-width: 1024px){
-    .product .container{
-        align-items: center;
-    }
     .productCategoryList{
         font-size: 1rem;
         padding: 0 1rem;
@@ -105,9 +102,6 @@
 @media screen and (max-width: 768px){
     .productItemCarousel{
         display: none;
-    }
-    .product .container{
-        align-items: center;
     }
     .product .container{
         flex-direction: column;

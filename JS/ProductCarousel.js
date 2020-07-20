@@ -22,8 +22,9 @@ function productCarousel(ProdcutData) {
           var img = product.img;
           var name = product.name;
           var price = product.price;
+          var number = product.no;
           document.getElementById("productItemCarousel").innerHTML += 
-          "<div>"+
+          "<div onclick='ProductPage("+number+")'>"+
           "<img src="+img+">"+
           "<div class='productItemCarouselName'>"+
           "<a href='#'>"+name+"</a>"+
@@ -33,7 +34,7 @@ function productCarousel(ProdcutData) {
           "<p>"+content+"</p>"+
           "</div>"+
           "</div>"
-        }, 2500 * i);
+        }, 3500 * i);
     }
     //再來就重複循環
     setInterval(function () {
@@ -62,7 +63,7 @@ function productCarousel(ProdcutData) {
         //清除資料
         document.getElementById("productItemCarousel").innerHTML =" ";
       }
-    }, 2500 * productItem.length);
+    }, 3500 * productItem.length);
   
   }
   
