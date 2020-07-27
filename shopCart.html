@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/product.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/ProductPageModifyCss.css">
+    <link rel="stylesheet" href="./css/shopCart.css">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/af0e7e3bea.js" crossorigin="anonymous"></script>
 </head>
@@ -45,7 +46,7 @@
             <li class="nav-items">
                 <!--<i class="fas fa-chalkboard-teacher"></i>--->
                 <div>
-                        <a href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
+                    <a href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-child"></i>-->
@@ -53,41 +54,16 @@
             </li>
         </ul>
     </nav>
-    <div class="homePage">
-        <div class="homePageBackGround"></div>
-    </div>
     <div class="TitlePart">
         <div class="container">
             <div class="TitleDot"></div>
-            <a>商品 Prouduct </a>
+            <a>購物車 ShopCart</a>
             <div class="TitleDot"></div>
         </div>
     </div>
-    <div class="product">
-        <div class="container">
-            <div class="productCategory">
-                <div class="productCategoryList" onclick="CatchProductItem('All')">
-                    <a>熱銷</a>
-                </div>
-                <div class="productCategoryList" onclick="CatchProductItem('Succulents')">
-                    <a>多肉</a>
-                </div>
-                <div class="productCategoryList" onclick="CatchProductItem('Cactus')">
-                    <a>仙人掌</a>
-                </div>
-                <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">
-                    <a>栽培器具</a>
-                </div>
-            </div>
-            <div class="productItemGroup" id="productItemGroup">
-                <div class="prodcutList" id="prodcutList">
-                    <div class="productinfo" id="productinfo"></div>
-                </div>
-                <div class="productPage" id="productPage">
-                </div>
-            </div>
-        </div>
-        <div id='loading'>正在載入頁面資料...</div>
+    <div class="shopCart" id="shopCart">
+
+    </div>
     </div>
     <div class="footer">
         <div class="Social">
@@ -111,8 +87,8 @@
         </div>
     </div>
     <script src="../MyWedDemo/JS/all.js"></script>
-    <script src="../MyWedDemo/JS/Product.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="../MyWedDemo/JS/shopCart.js"></script>
 </body>
 
 </html>

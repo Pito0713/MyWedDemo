@@ -1,0 +1,39 @@
+.shopCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cartData{
+    padding: 1rem 2rem;
+    
+}
+.cartData img{
+    width: 100px;
+    height: 100px;
+    padding: 0 1rem;
+}
+.cartDataInfo{
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    box-shadow: 1px 1px 3px var(--primary-color);
+}
+.cartDataInfo .img_name{
+    flex: 60%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.cartDataInfo .quaity_price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.quaity_price .quaity{
+    padding-right: 2rem;
+}
+.quaity_price .price{
+    padding-right: 1rem;
+}
