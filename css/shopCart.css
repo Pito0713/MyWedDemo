@@ -20,7 +20,7 @@
     box-shadow: 1px 1px 3px var(--primary-color);
 }
 .cartDataInfo .img_name{
-    flex: 60%;
+    flex: 2 1 60%;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -30,10 +30,56 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex: 1 2 40%;
 }
 .quaity_price .quaity{
     padding-right: 2rem;
 }
 .quaity_price .price{
     padding-right: 1rem;
+}
+#reviseCart{
+    display: none;
+    z-index: 10;
+    padding: 1rem;
+    background: var(--primary-color);
+    left: 35%;
+    top: 30%;
+    color: #fff;
+    position: fixed;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    border-radius: 5px;
+}
+#deleteCart{
+    display: none;
+    z-index: 10;
+    padding: 1rem;
+    background: var(--primary-color);
+    left: 35%;
+    top: 30%;
+    color: #fff;
+    position: fixed;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    border-radius: 5px;
+}
+#loading{
+    display: block;
+    z-index: 10;
+    padding: 1rem;
+    background: var(--primary-color);
+    left: 40%;
+    top: 50%;
+    color: #fff;
+    position: fixed;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 10px;
+    border-radius: 5px;
 }

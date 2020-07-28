@@ -32,27 +32,27 @@ $.get('https://script.google.com/macros/s/AKfycbwng1qjqvSst7AyUvsT5_EyTwd-wZ5DEZ
     productItem = Array.from(ProdcutData);
     console.log(productItem);
     document.getElementById("prodcutItem").innerHTML += 
-      "<div>" +
        "<div class='productSinglePageInfo'>" +
         "<img class='productSinglePageImg' src=" + productItem[data].img + ">" +
-        "<div>" +
+        "<div>"+
          "<a class='productSinglePageName' id='productSinglePageName'>" + productItem[data].name + "</a>" +
          "<a style='display:none' id='productSinglePageNo'>" + productItem[data].no + "</a>"+
          "<p>" + productItem[data].content + "</p>" +
+         "<a>ㄧ個  </a>"+
          "<a class='productSinglePagePrice' id='productSinglePagePrice'>" + productItem[data].price + "</a>" +
          "<div class='productCountQua'>"+
-          "<div>$<a id='productCountTotalPrice'>"+ productItem[data].price +"</a>"+
-          "</div>"+
-          "<button onclick='add()'> <a>+</a>"+"</button>"+
-          "<div id='counter'>1"+"</div>"+
-          "<button onclick='subtract()'> <a>-</a>"+"</button>"+
+          
+          "<div class='buttom' onclick='add()'> <a>+</a>"+"</div>"+
+          "<div style='width:2rem; text-align: center;  'id='counter'>1"+"</div>"+
+          "<div class='buttom' onclick='subtract()'> <a>-</a>"+"</div>"+
          "</div>"+
-         "<div>"+
-          "<button onclick='Cart()'> 加入購物車"+"</button>"+
+         "<div style='display:flex;  float: right;'>"+
+         "<div style='padding-right: 2rem; font-size: 1.2rem;'><a>共 $</a><a id='productCountTotalPrice'>"+ productItem[data].price +"</a>"+
+          "</div>"+
+          "<div class='buttom addCart' onclick='Cart()'> 加入購物車"+"</div>"+
          "</div>"+
         "</div>" +
-       "</div>" +
-      "</div>"
+       "</div>"
   }
 });
 
@@ -100,5 +100,9 @@ Cart = function(name){
         console.log(data);
     }
   });
+  $('#addCart').attr("style","display:block;");
+  window.setTimeout(()=>{
+    $('#addCart').attr("style","display:none;");
+  },2500);
 }
   

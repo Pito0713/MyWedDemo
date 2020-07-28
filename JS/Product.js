@@ -166,9 +166,7 @@ ProductPage = function(i) {
     data: data.toString(),
   };
   $.get('https://script.google.com/macros/s/AKfycbx-072NtScOpwqTuON17NYWrBxBaPVtB_GhLvNaCQXyIgb-zdbJ/exec',parameter);
-  $('#loading').attr("style","display:block;"); 
+  $('#addCart').attr("style","display:block;"); 
   window.setTimeout("window.location.href='../MyWedDemo/productSinglePage.html'",2000); 
-  
-  
 };
 
