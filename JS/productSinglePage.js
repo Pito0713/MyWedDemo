@@ -84,8 +84,8 @@ Cart = function(name){
   var Qauity = document.getElementById("productCountTotalPrice").innerHTML;
   var Price = document.getElementById("counter").innerHTML;
   var number = Number(document.getElementById("productSinglePageNo").innerHTML);
-  console.log(number+1)
   data = [[name , Qauity ,Price,number]]
+  console.log(data)
   parameter = {
     url: 'https://docs.google.com/spreadsheets/d/1XhsYtznJn5Ps3kF2ZXS0pAAuxy3SBksRGty7pMaL0GA/edit#gid=0',
     name: '工作表1',

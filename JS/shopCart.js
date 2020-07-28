@@ -104,13 +104,12 @@ $.get('https://script.google.com/macros/s/AKfycbzBfHnRl7BwDSse9EtR5EH2RO5hlfOroo
     var Qauity = document.getElementById(id+ 'counter').innerHTML;
     var Price = document.getElementById(id + "totalPrice").innerHTML;
     var number = Number(document.getElementById(id + "cartDataNo").innerHTML);
-    console.log(number+1)
     data = [[name , Price , Qauity ,number]]
     parameter = {
       url: 'https://docs.google.com/spreadsheets/d/1XhsYtznJn5Ps3kF2ZXS0pAAuxy3SBksRGty7pMaL0GA/edit#gid=0',
       name: '工作表1',
       data: data.toString(),
-      row: number+1,
+      row: number+2,
       column:data[0].length
     };
     $.get('https://script.google.com/macros/s/AKfycbwrmkkL4oSV_qgbVV1byYPJYoKnRbq7vstu6-urmTVlTDbv2ZU/exec', parameter, function (data) {
