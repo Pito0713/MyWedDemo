@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="nav">
         <div class="nav-burger">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
@@ -31,13 +31,13 @@
             <li class="nav-items">
                 <!--<i class="fas fa-home"></i>-->
                 <div>
-                    <a href="./index.html">首&nbsp&nbsp&nbsp頁</a>
+                    <a id='nav-text' href="./index.html">首&nbsp&nbsp&nbsp頁</a>
                 </div>
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-dumpster-fire"></i>-->
                 <div>
-                    <a href="./product.html">商&nbsp&nbsp&nbsp品</a>
+                    <a id='nav-text' href="./product.html">商&nbsp&nbsp&nbsp品</a>
                 </div>
             </li>
             <li class="nav-branch-logo">
@@ -45,12 +45,13 @@
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-chalkboard-teacher"></i>--->
-                <div>
-                    <a href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
+                <div><a id='nav-text' href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-child"></i>-->
-                <div>會&nbsp&nbsp&nbsp員</div>
+                <div>
+                    <a id='nav-text' href="./product.html">會&nbsp&nbsp&nbsp員</a>
+                </div>
             </li>
         </ul>
     </nav>
@@ -62,6 +63,8 @@
         </div>
     </div>
     <div class="shopCart" id="shopCart">
+        <div id="shopCartInfo"></div>
+        <div id="shopCartTotalPrice"></div>
     </div>
     <div id='loading'>正在載入頁面資料...</div>
     <div id='reviseCart'>成功修改商品</div>
@@ -88,7 +91,7 @@
                 tabindex="0"></iframe>
         </div>
     </div>
-    <script src="../MyWedDemo/JS/all.js"></script>
+    <script src="../MyWedDemo/JS/navbar.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="../MyWedDemo/JS/shopCart.js"></script>
 </body>

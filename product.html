@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="nav">
         <div class="nav-burger">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
@@ -30,13 +30,13 @@
             <li class="nav-items">
                 <!--<i class="fas fa-home"></i>-->
                 <div>
-                    <a href="./index.html">首&nbsp&nbsp&nbsp頁</a>
+                    <a id='nav-text' href="./index.html">首&nbsp&nbsp&nbsp頁</a>
                 </div>
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-dumpster-fire"></i>-->
                 <div>
-                    <a href="./product.html">商&nbsp&nbsp&nbsp品</a>
+                    <a id='nav-text' href="./product.html">商&nbsp&nbsp&nbsp品</a>
                 </div>
             </li>
             <li class="nav-branch-logo">
@@ -44,18 +44,16 @@
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-chalkboard-teacher"></i>--->
-                <div>
-                        <a href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
+                <div><a id='nav-text' href="../MyWedDemo/shopCart.html">購&nbsp物&nbsp車</a></div>
             </li>
             <li class="nav-items">
                 <!--<i class="fas fa-child"></i>-->
-                <div>會&nbsp&nbsp&nbsp員</div>
+                <div>
+                    <a id='nav-text' href="./product.html">會&nbsp&nbsp&nbsp員</a>
+                </div>
             </li>
         </ul>
     </nav>
-    <div class="homePage">
-        <div class="homePageBackGround"></div>
-    </div>
     <div class="TitlePart">
         <div class="container">
             <div class="TitleDot"></div>
@@ -67,16 +65,16 @@
         <div class="container">
             <div class="productCategory">
                 <div class="productCategoryList" onclick="CatchProductItem('All')">
-                    <a>熱銷</a>
+                    熱銷
                 </div>
                 <div class="productCategoryList" onclick="CatchProductItem('Succulents')">
-                    <a>多肉</a>
+                    多肉
                 </div>
                 <div class="productCategoryList" onclick="CatchProductItem('Cactus')">
-                    <a>仙人掌</a>
+                    仙人掌
                 </div>
                 <div class="productCategoryList" onclick="CatchProductItem('Cultivation')">
-                    <a>栽培器具</a>
+                    栽培器具
                 </div>
             </div>
             <div class="productItemGroup" id="productItemGroup">
@@ -110,7 +108,7 @@
                 tabindex="0"></iframe>
         </div>
     </div>
-    <script src="../MyWedDemo/JS/all.js"></script>
+    <script src="../MyWedDemo/JS/navbar.js"></script>
     <script src="../MyWedDemo/JS/Product.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 </body>

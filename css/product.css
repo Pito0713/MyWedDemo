@@ -38,6 +38,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr ;
 }
+.productCategoryList:hover {
+    border-left: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: #ffffff
+}
+
 /*----productItemCarousel----*/
 .prodcutItem{
     padding: 0.5rem;
@@ -77,6 +83,7 @@
 .productItemCarouselPrice{
     font-size: 1.5rem;
 }
+
 .productPage {
     width: 80%;
     margin: auto;
@@ -86,7 +93,7 @@
 }
 .productPage a,
 .productPage span{
-    padding: 0 1rem;
+    padding: 1rem;
 }
 .productPage a,
 .productPage span:hover{
@@ -127,6 +134,9 @@
     .product .container {
         width: 100%;
     }
+    .productPage a{
+        padding: 0.5rem;
+    }
 
 }
 
@@ -135,13 +145,12 @@
     z-index: 10;
     padding: 1rem;
     background: var(--primary-color);
-    left: 40%;
-    top: 50%;
+    left: 35%;
+    top: 40%;
     color: #fff;
     position: fixed;
     width: 150px;
-    height: 30px;
+    height: 25px;
     text-align: center;
-    box-shadow: 2px 2px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
 }

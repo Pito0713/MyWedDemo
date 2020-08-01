@@ -5,6 +5,11 @@
     justify-content: center;
     align-items: center;
 }
+.Item .container{
+    display: block;
+    text-align: center;
+}
+
 .itemPointImg {
     position: relative;
     display: block;
@@ -71,7 +76,7 @@
 .closeItemShow{
     position: absolute;
     left: 5%;
-    top: 5%;
+    top: 10%;
     z-index: 5;
 }
 
@@ -86,11 +91,6 @@
     }
 }
 
-@keyframes itemImg{
-    50%{
-        top:4px
-    }
-}
 
 
 @media screen and (max-width:1025px){
@@ -121,6 +121,9 @@
     .container{
         width: 320px;
     }
+    .itemPointImg {
+        width: 320px;
+    }
     .itemPointImg .itemImg{
         width: 30%;
     }
@@ -129,7 +132,17 @@
     .container{
         width: 240px;
     }
+    .itemPointImg {
+        width: 240px;
+    }
     .itemPointImg .itemImg{
         width: 20%;
+    }
+}
+
+
+@keyframes itemImg{
+    50%{
+        top:10px;
     }
 }

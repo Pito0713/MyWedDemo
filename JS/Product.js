@@ -32,11 +32,10 @@ window.onresize = function () {
 function pagination(ProdcutData, currentPage) {
   // 全部資料總數
   const dataTotal = ProdcutData.length;
-
+  
   // 每一頁顯示幾筆資料。
   var datapage ;
   if (screenWidth > 481) {
-    console.log(screenWidth)
     datapage = 4;
   } else {
     datapage = 2;
@@ -63,7 +62,6 @@ function pagination(ProdcutData, currentPage) {
       data.push(ProdcutData[i - 1]);
     }
   }
-  console.log(data);
 
   //建立頁面變數
   const page = {
@@ -94,9 +92,9 @@ function pageSelect(page) {
   //當currentPage 不可以大於最後一頁
   //都執行dataset
   if (page.currentPage < page.pageTotal) {
-    str += `<a data-page="${(page.currentPage) + 1}">下一頁</a>`;
+    str += `<a data-page="${Number(page.currentPage) + 1}">下一頁</a>`;
   } else {
-    str += `<span >下一頁</span>`;
+    str += `<span>下一頁</span>`;
   }
   //寫入變數str所有資料
   document.getElementById("productPage").innerHTML = str;
@@ -126,17 +124,11 @@ function displayData(data) {
       "</div>"
   }
 }
-function switchPage(e) {
-  //監聽父節點，使用 e.target.nodeName  取得點擊元素的標籤名稱<a>
-  if (e.target.nodeName !== 'A') return;
-  //提取data-page的資料
-  const page = e.target.dataset.page;
-  //回傳
-  pagination(ProdcutData, page);
-}
+
 //寫入監聽只要標籤名稱<a>都可以有這監聽
 document.getElementById("productPage").addEventListener('click', switchPage);
 
+var catchData;
 CatchProductItem = function (CatchProductId) {
   console.log(CatchProductId);
   if (CatchProductId == 'All') {
@@ -153,6 +145,17 @@ CatchProductItem = function (CatchProductId) {
   //用抓到的資料帶回
   pagination(catchData, 1)
 }
+function switchPage(e) {
+  //監聽父節點，使用 e.target.nodeName  取得點擊元素的標籤名稱<a>
+  if (e.target.nodeName !== 'A') return;
+  //提取data-page的資料
+  const page = e.target.dataset.page;
+  //回傳
+  if(!catchData){
+    catchData = ProdcutData;
+  }
+  pagination(catchData, page);
+}
 
 
 
@@ -166,7 +169,7 @@ ProductPage = function(i) {
     data: data.toString(),
   };
   $.get('https://script.google.com/macros/s/AKfycbx-072NtScOpwqTuON17NYWrBxBaPVtB_GhLvNaCQXyIgb-zdbJ/exec',parameter);
-  $('#addCart').attr("style","display:block;"); 
+  $('#loading').attr("style","display:block;"); 
   window.setTimeout("window.location.href='../MyWedDemo/productSinglePage.html'",2000); 
 };
 

@@ -8,11 +8,19 @@ fetch(Prodcut, { method: 'get' })
     ProdcutData = jsonData
     productCarousel(ProdcutData);
   })
+//取的視窗空度
+var screenWidth = document.documentElement.clientWidth
+
+window.onresize = function () {
+  var _this = this
+  _this.screenWidth = document.documentElement.clientWidth; // 視窗寬度
+};
 
 function productCarousel(ProdcutData) {
     //把data重新排列成array
     productItem = Array.from(ProdcutData);
     for (let i = 0; i < productItem.length; i++) {
+      if(screenWidth>768){
       //先跑一次循環
       setTimeout(
         function () {
@@ -35,6 +43,7 @@ function productCarousel(ProdcutData) {
           "</div>"+
           "</div>"
         }, 3500 * i);
+      }
     }
     //再來就重複循環
     setInterval(function () {
