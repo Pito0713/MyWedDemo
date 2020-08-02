@@ -18,10 +18,12 @@
 .Social i {
     font-size: 2rem;
     padding: 1rem;
+    text-align: center;
 }
 .location {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 1rem;
 }
 .location a{
     font-size: 1.5rem;
@@ -37,5 +39,12 @@
     }
     .locationMap{
         display: none;
+    }
+}
+@media screen and (max-width:481px){
+    .Social i {
+    
+        padding: 0.5rem;
+   
     }
 }

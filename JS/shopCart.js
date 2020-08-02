@@ -164,10 +164,7 @@ Delet = function (id) {
     }
   });
   $('#deleteCart').attr("style", "display:block;");
-  window.setTimeout(() => {
-    $('#deleteCart').attr("style", "display:none;");
-  }, 2500);
-  //window.setTimeout("window.location.href='../MyWedDemo/shopCart.html'",1000); 
+  window.setTimeout("window.location.href='../MyWedDemo/shopCart.html'",1000); 
 }
 
 
