@@ -90,7 +90,7 @@ $.get('https://script.google.com/macros/s/AKfycbzBfHnRl7BwDSse9EtR5EH2RO5hlfOroo
        
       }  
       document.getElementById("shopCartTotalPrice").innerHTML +=
-      "<a style='padding-right:1.5rem;'>總金額 :"+totalPrice+"</a>"
+      "<div style='padding-right:1.5rem;'>總金額 : <a id='AlltotalPrice'>"+totalPrice+"</a></div>"
      
     }, 1500);
   }
@@ -105,6 +105,11 @@ function add(id) {
   //在回寫上去
   document.getElementById(id + "counter").innerHTML = count;
   document.getElementById(id + "totalPrice").innerHTML = Number(Price * count);
+
+  let AllTotalPrice = document.getElementById("AlltotalPrice").innerHTML;
+  let TotalPrice =  Number(AllTotalPrice) + Number(Price)
+  document.getElementById("AlltotalPrice").innerHTML = "";
+  document.getElementById("AlltotalPrice").innerHTML += TotalPrice 
 }
 function subtract(id) {
   var count = document.getElementById(id + "counter").innerHTML;
@@ -113,9 +118,14 @@ function subtract(id) {
     count = 1;
   } else {
     count = parseInt(count) - 1;
+    let AllTotalPrice = document.getElementById("AlltotalPrice").innerHTML;
+    let TotalPrice =  Number(AllTotalPrice) - Number(Price)
+    document.getElementById("AlltotalPrice").innerHTML = "";
+    document.getElementById("AlltotalPrice").innerHTML += TotalPrice 
   }
   document.getElementById(id + "counter").innerHTML = count;
   document.getElementById(id + "totalPrice").innerHTML = Number(Price * count);
+  
 }
 
 Cart = function (id) {
